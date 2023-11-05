@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddGroupMembers AddGroupMembers snapshot 1`] = `
+Array [
+  <div
+    className="sc-bgqQcB iOFIEC"
+  >
+    <img
+      className="sc-gTRrQi hmyRUp"
+      src={Object {}}
+    />
+    <input
+      className="sc-ewnqHT edsCSP"
+      onChange={[Function]}
+      placeholder="Search"
+    />
+  </div>,
+  <div
+    className="sc-fFGjHI eOxMwt"
+    id="group_members"
+  />,
+]
+`;

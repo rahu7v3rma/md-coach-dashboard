@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RenameGroupContainer RenameGroupContainer snapshot 1`] = `
+<div
+  className="sc-bgqQcB iAtTuv"
+>
+  <div
+    className="sc-gTRrQi kQmhZJ"
+  >
+    <span
+      className="sc-ewnqHT elDAAT"
+      id="title_text"
+    >
+      Edit group details
+    </span>
+    <img
+      className="sc-fFGjHI fIIilU"
+      id="close_icon"
+      onClick={[Function]}
+      src={Object {}}
+    />
+  </div>
+  <div
+    className="sc-dicizt OtyZp"
+  >
+    <input
+      className="sc-gxYJeL eMsdlH"
+      id="group_input"
+      onChange={[Function]}
+      value="name"
+    />
+  </div>
+  <div
+    className="sc-kPTPQs bZMQqw"
+  />
+  <div
+    className="sc-ispOId dfyVaL"
+  >
+    <button
+      className="sc-kcuKUB dyCBKN"
+      id="btn_cancel"
+      onClick={[Function]}
+    >
+      Cancel
+    </button>
+    <button
+      className="sc-dcrmVg jfTqEK"
+      id="btn_rename"
+      onClick={[Function]}
+    >
+      Next
+    </button>
+  </div>
+</div>
+`;

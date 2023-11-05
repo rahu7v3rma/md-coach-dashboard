@@ -1,0 +1,1438 @@
+openapi: 3.1.0
+info:
+  title: MD Backend OpenAPI spec
+  version: 0.1.0
+components:
+  schemas:
+    error:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Error details
+        code:
+          type: string
+        message:
+          type: string
+        status:
+          type: integer
+        data:
+          type: object
+    UserBlock:
+      title: UserBlock
+      x-stoplight:
+        id: wmrmm8vko1jqf
+      type: object
+      properties:
+        is_completed:
+          type: boolean
+        order:
+          type: integer
+        user_lessons:
+          type: array
+          items:
+            $ref: '#/components/schemas/UserLesson'
+        block:
+          $ref: '#/components/schemas/Block'
+    UserLesson:
+      title: UserLesson
+      x-stoplight:
+        id: 27xdzjybp9sst
+      type: object
+      properties:
+        is_completed:
+          type: boolean
+        order:
+          type: number
+        lesson:
+          $ref: '#/components/schemas/Lesson'
+    BaseContent:
+      title: BaseContent
+      x-stoplight:
+        id: 4uktlkfacilp4
+      type: object
+      description: ''
+      examples: []
+      properties:
+        title:
+          type: string
+        order:
+          type: number
+        progress_action:
+          type: string
+          enum:
+            - click
+        text_content:
+          oneOf:
+            - $ref: '#/components/schemas/TextContent'
+            - type: 'null'
+              properties: {}
+        image_content:
+          oneOf:
+            - $ref: '#/components/schemas/ImageContent'
+            - type: 'null'
+              properties: {}
+        video_content:
+          oneOf:
+            - $ref: '#/components/schemas/VideoContent'
+            - type: 'null'
+              properties: {}
+    ImageContent:
+      title: ImageContent
+      x-stoplight:
+        id: xa0son48uy7bq
+      type: object
+      properties:
+        img_id:
+          type: string
+    TextContent:
+      title: TextContent
+      x-stoplight:
+        id: im5fawz9q576e
+      type: object
+      properties:
+        text:
+          type: string
+    VideoContent:
+      title: VideoContent
+      x-stoplight:
+        id: euq82kwmb1st8
+      type: object
+      properties:
+        video:
+          type: string
+    Block:
+      title: Block
+      x-stoplight:
+        id: wqgxwhizxvfu2
+      type: object
+      properties:
+        name:
+          type: string
+        icon:
+          type: string
+    Lesson:
+      title: Lesson
+      x-stoplight:
+        id: rf114w06j34tw
+      type: object
+      properties:
+        title:
+          type: string
+        icon:
+          type: string
+        id:
+          type: number
+  securitySchemes:
+    auth_key:
+      name: X-Authorization
+      type: apiKey
+      in: header
+      description: ''
+paths:
+  /user/login:
+    post:
+      summary: Login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: Email for login attempt
+                password:
+                  type: string
+                  description: Password for login attempt
+                coach:
+                  type: boolean
+                  default: false
+              required:
+                - email
+                - password
+      responses:
+        '200':
+          description: Credentials are correct
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+                    properties:
+                      username:
+                        type: string
+                      first_name:
+                        type: string
+                      last_name:
+                        type: string
+                      email:
+                        type: string
+                      auth_token:
+                        type: string
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: User logged in successfully.
+                    status: 200
+                    data:
+                      username: user1
+                      first_name: Some
+                      last_name: Name
+                      email: user1@example.example
+                      auth_token: abcd1234
+        '400':
+          description: Request is invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: request_invalid
+                    message: Request is invalid.
+                    status: 400
+                    data: {}
+        '401':
+          description: Bad credentials
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: bad_credentials
+                    message: Bad credentials.
+                    status: 401
+                    data: {}
+        '403':
+          description: Credentials correct but user has to change password
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: must_change_password
+                    message: Please change your password.
+                    status: 403
+                    data: {}
+      description: Log in to an existing account
+  /user/logout:
+    post:
+      summary: ''
+      operationId: post-users-logout
+      responses:
+        '200':
+          description: Logged out successfuly
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: User logged out successfully.
+                    status: 200
+                    data: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: unauthorized
+                    message: Unauthorized.
+                    status: 401
+                    data: {}
+      description: Log out
+      security:
+        - auth_key: []
+    parameters: []
+  /user/reset/request:
+    post:
+      summary: ''
+      operationId: post-user-reset-request
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: Reset password requested successfully.
+                    status: 200
+                    data: {}
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: request_invalid
+                    message: Request is invalid.
+                    status: 400
+                    data: {}
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: server_error
+                    message: Server error.
+                    status: 500
+                    data: {}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                client:
+                  type: string
+      description: Request a reset password code via email
+  /user/reset/verify:
+    post:
+      summary: ''
+      operationId: post-user-reset-verify
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: Reset password verified successfully.
+                    status: 200
+                    data: {}
+            application/xml:
+              schema:
+                type: object
+                properties: {}
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: request_invalid
+                    message: Request is invalid.
+                    status: 400
+                    data: {}
+                example-1:
+                  value:
+                    success: false
+                    code: bad_token
+                    message: Invalid or expired token.
+                    status: 400
+                    data: {}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+      description: Verify that a reset password code is valid
+  /user/reset/confirm:
+    post:
+      summary: ''
+      operationId: post-user-reset-confirm
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: Reset password confirmed successfully.
+                    status: 200
+                    data: {}
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: request_invalid
+                    message: Bad request.
+                    status: 400
+                    data: {}
+                example-1:
+                  value:
+                    success: false
+                    code: password_does_not_conform
+                    message: Request is invalid.
+                    status: 400
+                    data: {}
+                example-2:
+                  value:
+                    success: false
+                    code: bad_token
+                    message: Invalid or expired token.
+                    status: 400
+                    data: {}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+                password:
+                  type: string
+      description: Use a reset password code to change a user's password
+  /user/login/change-password:
+    post:
+      summary: ''
+      operationId: post-user-login-change-password
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+                    properties:
+                      username:
+                        type: string
+                      first_name:
+                        type: string
+                      last_name:
+                        type: string
+                      email:
+                        type: string
+                      auth_token:
+                        type: string
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: User logged in successfully.
+                    status: 200
+                    data:
+                      username: user1
+                      first_name: Some
+                      last_name: Name
+                      email: user1@example.example
+                      auth_token: abcd1234
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                Invalid request:
+                  value:
+                    success: false
+                    code: request_invalid
+                    message: Request is invalid.
+                    status: 400
+                    data: {}
+                New and old passwords are the same:
+                  value:
+                    success: false
+                    code: password_unchanged
+                    message: New password cannot be the same as old password.
+                    status: 400
+                    data: {}
+                Password does not conform to security requirements:
+                  value:
+                    success: false
+                    code: password_does_not_conform
+                    message: Request is invalid.
+                    status: 400
+                    data: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                Wrong old password:
+                  value:
+                    success: false
+                    code: bad_credentials
+                    message: Bad credentials.
+                    status: 401
+                    data: {}
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                User has already changed the initial password:
+                  value:
+                    success: false
+                    code: password_already_changed
+                    message: User password already changed.
+                    status: 401
+                    data: {}
+      description: Change a new user's password
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                old_password:
+                  type: string
+                new_password:
+                  type: string
+              required:
+                - email
+                - old_password
+                - new_password
+    parameters: []
+  /profile:
+    parameters: []
+    get:
+      summary: ''
+      operationId: get-profile
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+                    properties:
+                      diabetes_type:
+                        type:
+                          - string
+                          - 'null'
+                      image:
+                        type:
+                          - string
+                          - 'null'
+                      onboarding_form_url:
+                        type:
+                          - string
+                          - 'null'
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: User profile fetched successfully.
+                    status: 200
+                    data:
+                      diabetes_type: Prediabetes
+                      image: null
+                      onboarding_form_url: null
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: unauthorized
+                    message: Unauthorized.
+                    status: 401
+                    data: {}
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: not_found
+                    message: Profile does not exist.
+                    status: 404
+                    data: {}
+      security:
+        - auth_key: []
+  /profile/session:
+    parameters: []
+    post:
+      summary: ''
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                fcm_token:
+                  type: string
+                device_id:
+                  type: string
+                device_type:
+                  type: string
+                utc_time_diff_hours:
+                  type: number
+              required: []
+      operationId: post-profile-tokens
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+                    properties:
+                      token:
+                        type: string
+                      userId:
+                        type: string
+                      apiKey:
+                        type: string
+                      firebasePushProviderName:
+                        type: string
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: User session fetched and updated successfully.
+                    status: 200
+                    data:
+                      # user 1
+                      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZTBiYzYxNGU0ZmQwMzVhNDg4NjE5Nzk5ODUzYjA3NTE0M2RlZWE1OTZjNDc3YjhkYzA3N2UzMDljMGZlNDJlOSIsImV4cCI6MTY5OTAxMDM4N30.pxnoaF6I71GAwXOlrUwGxhXFCrQlzrVgGCXSjLyJ-34
+                      userId: e0bc614e4fd035a488619799853b075143deea596c477b8dc077e309c0fe42e9
+                      ## user 2
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZDhiZGY5YTBjYjI3YTE5M2ExMTI3ZGUyOTI0YjZlNWE5ZTRjMmQzYjNmZTQyZTkzNWUxNjBjMDExZjNkZjFmYyIsImV4cCI6MTY5OTAxMDM4OH0.UuPWhiwUUWzWVObndP1GjM4EQIo9NCW6Dq4_tqUdGq4
+                      #userId: d8bdf9a0cb27a193a1127de2924b6e5a9e4c2d3b3fe42e935e160c011f3df1fc
+                      ## user 3
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNWI2NTcxMmQ1NjVjMTU1MTM0MDk5ODEwMmQ0MThjZWNjYjM1ZGI4ZGJmYjQ1ZjkwNDFjNGNhZTQ4M2Q4NzE3YiIsImV4cCI6MTY5OTAxMDM4OX0.28PwDCuXRWjMjdbrPBI_L6_D9ZX3nrd2qQgvlLR21Zg
+                      #userId: 5b65712d565c1551340998102d418ceccb35db8dbfb45f9041c4cae483d8717b
+                      ## user 4
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMDMzYzMzOWE3OTc1NTQyNzg1YmU3NDIzYTViMzJmYTgwNDc4MTM2ODk3MjYyMTQxNDNjZGQ3OTM5NzQ3NzA5YyIsImV4cCI6MTY5OTAxMDM5MH0.WiRFrYD1ebouhcZBImdnMwjnU9eO87yLLU-pqg7B4yg
+                      #userId: 033c339a7975542785be7423a5b32fa8047813689726214143cdd7939747709c
+                      ## user 5
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzgxZDQwZGJlZWQzNjlmMTQ3NjA4NmNmODgyZGQzNmJmMWMzZGMzNWUwNzAwNmYwYmVjNTg4Yjk4MzA1NTQ4NyIsImV4cCI6MTY5OTAxMDM5MH0.U8BKb3k7UuAtPpuVXD-Gzz7MglUt0I93ctTem6qlWik
+                      #userId: c81d40dbeed369f1476086cf882dd36bf1c3dc35e07006f0bec588b983055487
+                      ## user 6
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWUyNTliN2Y2YjRjNzQxOTM3YTk2YTk2MTdiM2U2Yjg0ZTE2NmZmNmU5MjVlNDE0ZTdiNzI5MzZmNWEyYTUxZiIsImV4cCI6MTY5OTAxMDM5MX0.Sy4qwOn3Q5k65QZwCOm5kgOVfT-EUfS6chv92Xo-yIg
+                      #userId: 9e259b7f6b4c741937a96a9617b3e6b84e166ff6e925e414e7b72936f5a2a51f
+                      ## user 7
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTA0OGYwM2RiNWQ0NWY2NTRiOTU1ZWFlMjBkODRiNzI2NzM2ODBmYjEzYjMxOGU3ZGEyMmU4ZGNlNThkZjIxYyIsImV4cCI6MTY5OTAxMDM5Mn0.VULm1Uxua1Cx-WrD9EVduqPyMtgNX16NQ__ud1k-e7I
+                      #userId: 1048f03db5d45f654b955eae20d84b72673680fb13b318e7da22e8dce58df21c
+                      ## user 8
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOGYwNzAzZDQwNmZkYjBlYTgwMTFkNWRlMzQyYzNhY2E2MjIxNDc1OGE4YTJiNWI4YTRlOWYxYzhjNmM0MjQ2MiIsImV4cCI6MTY5OTAxMDM5M30.Ttv2wtJoqERko2ODcN_UGDd8RnIj8PDDWbnbNcWE7Vw
+                      #userId: 8f0703d406fdb0ea8011d5de342c3aca62214758a8a2b5b8a4e9f1c8c6c42462
+                      ## user 9
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTgyYjMyMzU5NTU4ZWIwOTI1MTFiNzE2Njg2NzUwM2RkZDgzZmJlNWI0MmYyNTQ1ZTE5MDMwMTZlNzIxMzkzZCIsImV4cCI6MTY5OTAxMDM5NH0.Wf_SO3_U4iV9oYgF0fPFT5yt9k1QV6lnXjEpDOt5AIA
+                      #userId: 182b32359558eb092511b7166867503ddd83fbe5b42f2545e1903016e721393d
+                      ## user 10
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZmU1ZjBmYzY0MGNiYmMxMTM0MDZmMDQyZDA4Y2M2MGJhNzg0Yzc3NWY3YzMyOTk5ODU2NjUzMjNjNWZiY2RjNCIsImV4cCI6MTY5OTAxMDM5NX0.1VC7D6K7qFNZBgTqgZHTXFGTVhqH-i9spKspyk8lUJ0
+                      #userId: fe5f0fc640cbbc113406f042d08cc60ba784c775f7c3299985665323c5fbcdc4
+                      apiKey: 9h8revtjvfgt
+                      firebasePushProviderName: fake-provider
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: unauthorized
+                    message: Unauthorized.
+                    status: 401
+                    data: {}
+      security:
+        - auth_key: []
+  /content/journey:
+    get:
+      summary: Get user journey
+      tags: []
+      responses:
+        '200':
+          description: User content fetched
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/UserBlock'
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: User journey fetched successfully.
+                    status: 200
+                    data:
+                      - is_completed: false
+                        order: 1
+                        block:
+                          name: cs 101
+                          icon: 'https://bh-md-static-37458bd29d6a2cf3.s3.amazonaws.com/cs101.png'
+                          locked: true
+                        user_lessons:
+                          - is_completed: false
+                            order: 1
+                            lesson:
+                              id: 1
+                              title: programming
+                              icon: 'https://bh-md-static-37458bd29d6a2cf3.s3.amazonaws.com/programming.png'
+                          - is_completed: false
+                            order: 2
+                            lesson:
+                              id: 2
+                              title: db
+                              icon: 'https://bh-md-static-37458bd29d6a2cf3.s3.amazonaws.com/db.png'
+                      - is_completed: false
+                        order: 2
+                        block:
+                          name: cs 102
+                          icon: 'https://bh-md-static-37458bd29d6a2cf3.s3.amazonaws.com/cs102.png'
+                          locked: true
+                        user_lessons:
+                          - is_completed: false
+                            order: 1
+                            lesson:
+                              id: 3
+                              title: algorithms
+                              icon: 'https://bh-md-static-37458bd29d6a2cf3.s3.amazonaws.com/algorithms.png'
+                          - is_completed: false
+                            order: 2
+                            lesson:
+                              id: 4
+                              title: patterns
+                              icon: 'https://bh-md-static-37458bd29d6a2cf3.s3.amazonaws.com/patterns.png'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: unauthorized
+                    message: Unauthorized.
+                    status: 401
+                    data: {}
+      operationId: get-content-asd
+      security:
+        - auth_key: []
+      description: Get a user's journey (blocks and lessons)
+    parameters: []
+  '/content/lesson/{lessonId}/content':
+    parameters:
+      - schema:
+          type: string
+        name: lessonId
+        in: path
+        required: true
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/BaseContent'
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: Lesson content fetched successfully.
+                    status: 200
+                    data:
+                      - title: Programming
+                        order: 1
+                        progress_action: click
+                        video_content:
+                          video: abcd1234
+                      - title: Programming
+                        order: 2
+                        progress_action: click
+                        text_content:
+                          text: 'First paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hendrerit dolor magna eget est lorem ipsum. Aliquam etiam erat velit scelerisque in dictum. Viverra nibh cras pulvinar mattis nunc. Volutpat ac tincidunt vitae semper quis lectus nulla at volutpat. Sed pulvinar proin gravida hendrerit lectus a. Et magnis dis parturient montes nascetur ridiculus mus. Sodales neque sodales ut etiam sit. Diam quam nulla porttitor massa id. Montes nascetur ridiculus mus mauris vitae ultricies leo. Lacus sed turpis tincidunt id aliquet risus. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Cursus in hac habitasse platea dictumst. Commodo sed egestas egestas fringilla phasellus faucibus. Pellentesque dignissim enim sit amet venenatis urna. Convallis convallis tellus id interdum velit laoreet id donec. Sit amet luctus venenatis lectus magna fringilla. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Nam aliquam sem et tortor consequat. Amet est placerat in egestas erat imperdiet sed euismod.\nSecond paragraph: Ullamcorper malesuada proin libero nunc consequat interdum varius. Viverra justo nec ultrices dui sapien eget. Fermentum leo vel orci porta non. Elit at imperdiet dui accumsan sit amet nulla facilisi morbi. Mauris nunc congue nisi vitae suscipit tellus mauris a. Consequat ac felis donec et odio pellentesque diam. Nec tincidunt praesent semper feugiat. Id nibh tortor id aliquet lectus proin nibh. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Adipiscing tristique risus nec feugiat in fermentum. Cursus eget nunc scelerisque viverra mauris in.\nThird paragraph: Odio tempor orci dapibus ultrices in iaculis. Non nisi est sit amet facilisis magna etiam tempor orci. Neque sodales ut etiam sit. Porta nibh venenatis cras sed felis eget velit. Eu nisl nunc mi ipsum. Pellentesque nec nam aliquam sem et tortor consequat id. Blandit cursus risus at ultrices mi tempus imperdiet. Mauris ultrices eros in cursus turpis massa tincidunt. Quisque non tellus orci ac auctor augue. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus et. Erat velit scelerisque in dictum non consectetur. Etiam erat velit scelerisque in dictum non consectetur a erat. Diam donec adipiscing tristique risus nec feugiat in fermentum. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Vitae elementum curabitur vitae nunc sed velit. Magna sit amet purus gravida quis blandit turpis. Fermentum et sollicitudin ac orci phasellus egestas tellus.'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: unauthorized
+                    message: Unauthorized.
+                    status: 401
+                    data: {}
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: not_found
+                    message: Not found.
+                    status: 404
+                    data: {}
+      operationId: get-lesson-lessonId-content
+      security:
+        - auth_key: []
+      description: Get a journey lesson's content
+  '/content/lesson/{lessonId}/complete':
+    parameters:
+      - schema:
+          type: string
+        name: lessonId
+        in: path
+        required: true
+    put:
+      summary: ''
+      operationId: put-lesson-lessonId-complete
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: User lesson updated successfully.
+                    status: 200
+                    data: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: unauthorized
+                    message: Unauthorized.
+                    status: 401
+                    data: {}
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: not_found
+                    message: Not found.
+                    status: 404
+                    data: {}
+      description: Complete a journey lesson
+  /user/customers:
+    get:
+      summary: Fetch Customer list
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: Users retrieved successfully.
+                    status: 200
+                    data:
+                      count: 2
+                      has_next: false
+                      has_previous: false
+                      next_page_number: null
+                      list:
+                        - id: 1
+                          name: "Justin Curtis"
+                          type: "T2D"
+                          group: "Group B"
+                          engagement: "2023-04-06T12:23:00Z"
+                          last_fasting: 117
+                          second_last_fasting: 117
+                          last_weight: 142
+                          second_last_weight: 142
+                          weight_units: "kg"
+                          last_week_avg_fbg: 142
+                          activity_type: "Running"
+                          duration: 35
+                          weekly_total: 125
+                          hydration: 3
+                          hydration_unit: "cups"
+                          fbg: 120
+                          second_last_fbg: 130
+                        - id: 2
+                          name: "Allison Franci"
+                          type: "PreDB"
+                          group: "Group A"
+                          engagement: "2023-04-01T12:23:00Z"
+                          last_fasting: 88
+                          second_last_fasting: 117
+                          last_weight: 194
+                          second_last_weight: 142
+                          weight_units: "kg"
+                          last_week_avg_fbg: 142
+                          activity_type: "Walking"
+                          duration: 35
+                          weekly_total: 125
+                          hydration: 2
+                          hydration_unit: "cups"
+                          fbg: 12
+                          second_last_fbg: 8
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: unauthorized
+                    message: Unauthorized.
+                    status: 401
+                    data: { }
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: not_found
+                    message: Not found.
+                    status: 404
+                    data: { }
+      operationId: Get Customers
+      security:
+        - auth_key: [ ]
+      description: Get Customer list
+  /log/recent:
+    get:
+      summary: get user recent logs
+      tags: [ ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: User Log fetched Successfully.
+                    status: 200
+                    data:
+                      count: 9
+                      has_next: false
+                      has_previous: false
+                      next_page_number: null
+                      list:
+                        - id: 1
+                          type: UserExercise
+                          log_time: "2023-03-31T12:12:12Z"
+                          duration_minutes: "123"
+                          activity_type: "walking"
+                          intensity: "3"
+                        - id: 2
+                          type: UserWeight
+                          log_time: "2023-01-12T09:00:00Z"
+                          amount: "111"
+                          unit: "kg"
+                        - id: 3
+                          type: UserFast
+                          log_time: "2012-12-12T12:12:12Z"
+                          duration_minutes: "123"
+                        - id: 4
+                          type: UserInsulin
+                          log_time: "2012-12-12T12:12:12Z"
+                          units: "111"
+                          injection_type: "cc"
+                        - id: 5
+                          type: UserGlucose
+                          log_time: "2012-12-12T12:12:12Z"
+                          amount: 7.2
+                          unit: "ml"
+                          measurement_type: "Pre Meal"
+                        - id: 6
+                          type: UserDrink
+                          log_time: "2012-12-12T12:12:12Z"
+                          amount: "12"
+                          unit: "oz"
+                        - id: 7
+                          type: UserMedication
+                          log_time: "2012-12-12T12:12:12Z"
+                          amount: "21"
+                          unit: "cc"
+                          dose: "1.5 mg"
+                          drug_name: "Ibuprofen 100"
+                        - id: 8
+                          type: UserFood
+                          log_time: "2012-12-12T12:12:12Z"
+                          image: "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        - id: 9
+                          lesson:
+                            id: 1
+                            title: programming
+                            icon: 'https://bh-md-static-37458bd29d6a2cf3.s3.amazonaws.com/programming.png'
+                          user_block: 1
+                          log_time: "2012-12-12T12:12:12Z"
+                          is_completed: true
+                          type: UserLesson
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: unauthorized
+                    message: Unauthorized.
+                    status: 401
+                    data: { }
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: not_found
+                    message: Not found.
+                    status: 404
+                    data: { }
+      operationId: Get User Recent Logs
+      security:
+        - auth_key: [ ]
+      description: Get User Recent Log
+  /user/{id}:
+    get:
+      summary: get user detail
+      tags: [ ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: Customer info retrieved successfully.
+                    status: 200
+                    data:
+                      email: username@gmail.com
+                      first_name: test
+                      last_name: user
+                      image: null
+                      diabetes_type: "Prediabetes"
+                      date_of_birth: "1994-07-25"
+                      contact_number: 9876543210
+                      next_lesson:
+                        id: 2
+                        timestamp: "2023-03-29T17:06:06.826505Z"
+                        is_completed: false
+                        order: 1
+                        updated_at: "2023-03-29T17:06:06.826536Z"
+                        user_block: 13,
+                        user_id: 2
+                        lesson:
+                          id: 4
+                          title: Fruits your key to feeling full
+                          icon: null
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: unauthorized
+                    message: Unauthorized.
+                    status: 401
+                    data: { }
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: not_found
+                    message: Not found.
+                    status: 404
+                    data: { }
+      operationId: Get User Details
+      security:
+        - auth_key: [ ]
+      description: Get User Details
+  /user/notification:
+    get:
+      summary: get user notification
+      tags: [ ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: User notification fetched Successfully.
+                    status: 200
+                    data:
+                      count: 4
+                      has_next: false
+                      has_previous: false
+                      next_page_number: null
+                      total_unread: 2
+                      list:
+                        - id: 1
+                          title: "Lesson Completed"
+                          description: "test user completed lesson 1"
+                          image: null
+                          date_time: "2023-03-08T12:12:12Z"
+                          read_flag: false
+                          payload: 1
+                          type: "lesson.completed"
+                        - id: 2
+                          title: "Andew Tomson"
+                          description: "Sent you a photo"
+                          image: null
+                          date_time: "2023-02-08T12:12:12Z"
+                          read_flag: false
+                          action: "chat"
+                        - id: 3
+                          title: "Samantha Green"
+                          description: "Updated profile info"
+                          image: null
+                          date_time: "2023-01-08T12:12:12Z"
+                          read_flag: true
+                          action: "chat"
+                        - id: 4
+                          title: "Adam Storm"
+                          description: "Sent you a message"
+                          image: null
+                          date_time: "2023-02-03T12:12:12Z"
+                          read_flag: true
+                          action: "chat"
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: unauthorized
+                    message: Unauthorized.
+                    status: 401
+                    data: { }
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: not_found
+                    message: Not found.
+                    status: 404
+                    data: { }
+      operationId: Get User Notifications
+      security:
+        - auth_key: [ ]
+      description: Get User Notifications
+  /user/notification/{id}:
+    patch:
+      summary: read user notification
+      tags: [ ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: Notification updated successfully.
+                    status: 200
+                    data:
+                      notification_id: 4
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: unauthorized
+                    message: Unauthorized.
+                    status: 401
+                    data: { }
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: not_found
+                    message: Not found.
+                    status: 404
+                    data: { }
+      operationId: Read User Notification
+      security:
+        - auth_key: [ ]
+      description: Read User Notification

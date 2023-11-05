@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'),
+        url('./assets/fonts/Poppins/Poppins-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 500;
+    src: local('Poppins-Medium'),
+        url('./assets/fonts/Poppins/Poppins-Medium.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 600;
+    src: local('Poppins-SemiBold'),
+        url('./assets/fonts/Poppins/Poppins-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 700;
+    src: local('Poppins-Bold'),
+        url('./assets/fonts/Poppins/Poppins-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 800;
+    src: local('Poppins-ExtraBold'),
+        url('./assets/fonts/Poppins/Poppins-ExtraBold.otf') format('opentype');
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+div, span, section {
+    box-sizing: border-box;
+}

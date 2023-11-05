@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-ispOId eMkvam"
+    height="100px"
+    width="100px"
+  >
+    <div
+      class="sc-koqlAI bnSEwg"
+    >
+      <div
+        class="sc-kGRGSO leolIO"
+      >
+        <img
+          class="sc-hKhKOZ oGqhD"
+          src="icon"
+        />
+        <p
+          class="sc-jJTsDX lmkThR"
+          color="#72996B"
+          font-family="\\"Poppins\\", sans-serif"
+          font-size="14"
+          font-weight="600"
+        >
+          title
+        </p>
+      </div>
+      <div>
+        <img
+          alt=""
+          class="sc-fAMvPz bpvgxV"
+          src="image"
+        />
+      </div>
+      <div
+        class="sc-kGRGSO sc-jDnxRY leolIO"
+      >
+        <p
+          class="sc-jJTsDX UehbF"
+          color="#271A51"
+          font-family="\\"Poppins\\", sans-serif"
+          font-size="14"
+          font-weight="500"
+        >
+          00:00
+        </p>
+      </div>
+    </div>
+    <div
+      class="sc-grzvtn"
+    >
+      children
+    </div>
+  </div>
+</DocumentFragment>
+`;

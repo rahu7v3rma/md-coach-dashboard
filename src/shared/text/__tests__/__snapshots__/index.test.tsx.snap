@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Component renders without crashing 1`] = `
+<p
+  className="sc-bgqQcB ifFmYu"
+>
+  test
+</p>
+`;

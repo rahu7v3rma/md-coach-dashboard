@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar component matches the snapshot 1`] = `
+<div
+  className="sc-bgqQcB eBGUbM"
+>
+  <img
+    alt="search"
+    className="sc-gTRrQi iZnMqf"
+    src={Object {}}
+  />
+  <input
+    className="sc-ewnqHT cFPklM"
+    name="groupname"
+    onChange={[Function]}
+    placeholder="Search"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`SearchBar component renders with a search icon and placeholder text 1`] = `
+<div
+  className="sc-bgqQcB eBGUbM"
+>
+  <img
+    alt="search"
+    className="sc-gTRrQi iZnMqf"
+    src={Object {}}
+  />
+  <input
+    className="sc-ewnqHT cFPklM"
+    name="groupname"
+    onChange={[Function]}
+    placeholder="Search"
+    type="text"
+    value=""
+  />
+</div>
+`;

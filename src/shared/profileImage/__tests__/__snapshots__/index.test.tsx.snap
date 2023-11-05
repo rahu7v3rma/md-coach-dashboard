@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches the snapshot 1`] = `
+<div
+  className="sc-fFGjHI fiLKAe"
+>
+  <label>
+    <input
+      accept="image/png, image/jpeg"
+      aria-label="File input"
+      className="sc-gxYJeL fcIGhX"
+      id="handleSelectedFileChanged"
+      onChange={[Function]}
+      type="file"
+    />
+    <div
+      className="sc-dicizt hLxdUU"
+      id="editOverlay"
+    >
+      <img
+        alt="avatar"
+        className="sc-ewnqHT"
+        id="defaultAvatar"
+        src={Object {}}
+      />
+      <img
+        alt="edit"
+        className="sc-iVCKna dSjaUI"
+        src={Object {}}
+      />
+    </div>
+  </label>
+</div>
+`;

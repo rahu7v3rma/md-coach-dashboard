@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaginationComponent PaginationComponent snapshot 1`] = `
+<div
+  className="sc-gTRrQi cMOLXp"
+>
+  <div
+    className="sc-ewnqHT bmfxqK"
+  >
+    <p
+      className="sc-bgqQcB lckgVS"
+      color="#A4AAAF"
+      fontWeight="500"
+    >
+      Showing 
+      1
+       to 
+      10
+       of
+       
+      100
+       Clients
+    </p>
+    <select
+      aria-label="rows-per-page-dropwon"
+      className="sc-dicizt jQqwrl"
+      id="row-dropdown"
+      onChange={[Function]}
+      value={10}
+    >
+      <option
+        value={10}
+      >
+        10
+      </option>
+      <option
+        value={20}
+      >
+        20
+      </option>
+    </select>
+  </div>
+  <div
+    className="sc-ewnqHT bmfxqK"
+  >
+    <button
+      className="sc-fFGjHI gXKLjv"
+      id="prev_btn"
+      onClick={[Function]}
+    >
+      Previous
+    </button>
+    <p
+      className="sc-bgqQcB jJSqi"
+      color="#babfc3"
+    >
+       
+      1
+       of 
+      10
+       
+    </p>
+    <button
+      className="sc-fFGjHI gXKLjv"
+      id="next_btn"
+      onClick={[Function]}
+    >
+      Next
+    </button>
+  </div>
+</div>
+`;

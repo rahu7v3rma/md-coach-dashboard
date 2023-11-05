@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader Loader snapshot 1`] = `
+.c0 {
+  -webkit-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+  width: 25px;
+  height: 25px;
+}
+
+.c0 .path {
+  stroke: #5652bf;
+  stroke-linecap: round;
+  -webkit-animation: dash 1.5s ease-in-out infinite;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+<svg
+  className="c0"
+  viewBox="0 0 50 50"
+>
+  <circle
+    className="path"
+    cx="25"
+    cy="25"
+    fill="none"
+    r="20"
+    strokeWidth="4"
+  />
+</svg>
+`;

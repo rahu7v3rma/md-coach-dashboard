@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot 1`] = `
+<DocumentFragment>
+  <p
+    class="sc-gTRrQi bFoqDV sc-jDnxRY sc-fGwHKD fPcaiw hIyJfw"
+  >
+    Today
+  </p>
+  <div
+    class="sc-iBTzgk gVgZbe"
+  >
+    <div
+      class="sc-jrrXlR ha-dviZ"
+    >
+      <div
+        class="sc-IhgdQ gVMaCm"
+      >
+        <div
+          class="sc-fxAUDG crypgK"
+        >
+          <img
+            class="sc-guKdVK bNdiCm"
+            src="[object Object]"
+          />
+          <p
+            class="sc-gTRrQi bNPfnJ"
+            color="#72996B"
+            font-family="\\"Poppins\\", sans-serif"
+            font-size="14"
+            font-weight="600"
+          >
+            Lesson Completed
+          </p>
+        </div>
+        <div
+          class="sc-fxAUDG sc-dzIIgs crypgK"
+        >
+          <p
+            class="sc-gTRrQi bKwhER"
+            color="#271A51"
+            font-family="\\"Poppins\\", sans-serif"
+            font-size="14"
+            font-weight="500"
+          >
+            00:00
+          </p>
+        </div>
+      </div>
+      <div
+        class="sc-dGFpAT"
+      >
+        <div
+          class="sc-iLBJAN gRTvBt"
+        >
+          <p
+            class="sc-gTRrQi bFoqDV sc-irmnWS jgdkkg"
+          >
+            2
+          </p>
+          <p
+            class="sc-gTRrQi bFoqDV sc-irmnWS jgdkkg"
+          >
+            1.23
+          </p>
+          <div
+            class="sc-fYYabh RpqDi"
+          >
+            <p
+              class="sc-gTRrQi bFoqDV sc-gKfoOY eFGkpe"
+            >
+              10
+            </p>
+            <p
+              class="sc-gTRrQi bFoqDV sc-gKfoOY eFGkpe"
+            >
+              Running
+            </p>
+          </div>
+          <div
+            class="sc-jVOTke chnZQA"
+          >
+            <img
+              class="sc-fnVmsx fsZnvi"
+              src="lessonIcon"
+            />
+            <p
+              class="sc-gTRrQi bFoqDV sc-gKfoOY eFGkpe"
+            >
+              lessonTitle
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-ispOId eJtfGw"
+    height="100px"
+    width="335px"
+  >
+    <img
+      alt="icon"
+      class="sc-cNNTdL enpNFh"
+      src="imageUrl"
+    />
+    <div
+      class="sc-ehYhRg jxNZlb"
+    >
+      <p
+        class="sc-jJTsDX iVQlaw"
+        color="#271A51"
+        font-weight="700"
+      >
+        title
+      </p>
+      <p
+        class="sc-jJTsDX eWOEaN"
+        color="#A4AAAF"
+        font-size="12"
+        font-weight="300"
+      >
+        subTitle
+      </p>
+    </div>
+    <div
+      class="sc-fia-DRh czKmhu"
+    >
+      <p
+        class="sc-jJTsDX iXagFl"
+        color="#72996B"
+        font-size="12"
+      >
+        time
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

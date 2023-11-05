@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-cNNTdL ipNfQh"
+  >
+    <div
+      class="sc-fFGjHI fiLKAe"
+    >
+      <div
+        class="sc-dicizt fDkbuM sc-lpcdUm kedkeV"
+      >
+        <img
+          alt=""
+          src="profileImg"
+        />
+      </div>
+    </div>
+    <div
+      class="sc-ehYhRg fALuif"
+    >
+      <p
+        class="sc-jJTsDX hYccWd sc-fia-DRh kyMoJi"
+      >
+        name
+      </p>
+      <button
+        class="sc-kPTPQs jWIHQp sc-iYsSXP kcemYU"
+        height="40px"
+        width="97px"
+      >
+        <img
+          class="sc-eeGUxP cnJMqg"
+          src="[object Object]"
+        />
+        <p
+          class="sc-jJTsDX hYccWd sc-hYqwXO kxcvVT"
+        >
+          Chat
+        </p>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

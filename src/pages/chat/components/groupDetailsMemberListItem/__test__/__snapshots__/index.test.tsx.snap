@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GroupDetailsMemberListItem GroupDetailsMemberListItem snapshot 1`] = `
+<div
+  className="sc-kPTPQs eyzvxh"
+>
+  <div
+    className="sc-fFGjHI fiLKAe"
+  >
+    <div
+      className="sc-dicizt fDkbuM sc-jrrXlR dDifuW"
+    >
+      <img
+        alt="avatar"
+        className="sc-ewnqHT sc-jrrXlR dDifuW"
+        id="defaultAvatar"
+        src={Object {}}
+      />
+    </div>
+  </div>
+  <div
+    className="sc-ispOId jTNajy"
+  >
+    <h1
+      className="sc-kcuKUB cDSirl"
+    />
+    <p
+      className="sc-dcrmVg kgdVur"
+      id="memberStatus"
+    />
+  </div>
+  <img
+    alt="dots"
+    className="sc-kuWgmH iLegWu"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    src={Object {}}
+  />
+</div>
+`;

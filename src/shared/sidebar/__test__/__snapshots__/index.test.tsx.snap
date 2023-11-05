@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideBar SideBar snapshot 1`] = `
+<div
+  className="sc-ckPVkh wbexr"
+>
+  <div
+    className="sc-gAigJI hCiGyo"
+  >
+    <div
+      className="sc-hCnrGf gQrVyO"
+    >
+      <img
+        alt="MD Icon"
+        className="sc-jWActB hOKcqo"
+        src={Object {}}
+      />
+      <p
+        className="sc-gCkVGe byyJTC"
+      >
+        Mastering 
+        <br />
+        Programs
+      </p>
+    </div>
+    <div
+      className="sc-iWxGtA eBJcwv"
+    >
+      <div
+        className="sc-pDgPE lkMphx"
+        onClick={[Function]}
+        selected={false}
+      >
+        <div
+          className="sc-hIiahf gceOdP"
+        >
+          <img
+            alt="My Clients"
+            src={Object {}}
+          />
+        </div>
+        <p
+          className="sc-IeChK bthVaH"
+          selected={false}
+        >
+          My Clients
+        </p>
+      </div>
+      <div
+        className="sc-pDgPE lkMphx"
+        onClick={[Function]}
+        selected={false}
+      >
+        <div
+          className="sc-hIiahf gceOdP"
+        >
+          <img
+            alt="Chat"
+            src={Object {}}
+          />
+        </div>
+        <p
+          className="sc-IeChK bthVaH"
+          selected={false}
+        >
+          Chat
+        </p>
+      </div>
+    </div>
+    <p
+      className="sc-bgqQcB kExYlE sc-bNLxdK bCWNVb"
+      color="#B16663"
+      fontSize={12}
+      fontWeight="500"
+      onClick={[Function]}
+    >
+      Notifications are disabled. Click here to grant required permissions
+    </p>
+  </div>
+  <div
+    className="sc-bhlPkD eCkjlf"
+  >
+    <div
+      className="sc-fwEaKe juobiZ"
+    >
+      <div
+        className="sc-hpGEOZ kVoPHL"
+      >
+        <p
+          className="sc-bgqQcB clLeeq"
+          fontWeight="600"
+        >
+          Logout
+        </p>
+        <p
+          className="sc-bgqQcB cGGHIb"
+          color="#A4AAAF"
+          fontSize={11}
+          fontWeight="500"
+        >
+          Click below to logout the dashboard
+        </p>
+      </div>
+      <button
+        className="sc-ispOId humVbF"
+        height="40px"
+        id="logoutBtn"
+        onClick={[Function]}
+      >
+        <p
+          className="sc-bgqQcB cDRZfz"
+          fontSize={12}
+          fontWeight="600"
+        >
+          Logout
+        </p>
+      </button>
+    </div>
+  </div>
+</div>
+`;

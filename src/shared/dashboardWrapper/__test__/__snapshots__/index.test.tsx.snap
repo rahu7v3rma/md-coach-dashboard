@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardLayout DashboardLayout snapshot 1`] = `
+<div
+  className="sc-hfKJst kRMkjY"
+>
+  <div
+    className="sc-dyTUbJ fzBoHW"
+  >
+    <div
+      className="sc-kJpdyg gaapxs"
+    >
+      <div
+        className="sc-kJwmPe jHHKdK"
+      >
+        <img
+          alt="MD Icon"
+          className="sc-emqRaN jhIXvV"
+          src={Object {}}
+        />
+        <p
+          className="sc-dzbdsH gMHdzK"
+        >
+          Mastering 
+          <br />
+          Programs
+        </p>
+      </div>
+      <div
+        className="sc-dmovaM eTRJKf"
+      >
+        <div
+          className="sc-eWhHU hgAbBM"
+          onClick={[Function]}
+          selected={false}
+        >
+          <div
+            className="sc-brSOsn dSyhQB"
+          >
+            <img
+              alt="My Clients"
+              src={Object {}}
+            />
+          </div>
+          <p
+            className="sc-iCnXOK ewXqqL"
+            selected={false}
+          >
+            My Clients
+          </p>
+        </div>
+        <div
+          className="sc-eWhHU hgAbBM"
+          onClick={[Function]}
+          selected={false}
+        >
+          <div
+            className="sc-brSOsn dSyhQB"
+          >
+            <img
+              alt="Chat"
+              src={Object {}}
+            />
+          </div>
+          <p
+            className="sc-iCnXOK ewXqqL"
+            selected={false}
+          >
+            Chat
+          </p>
+        </div>
+      </div>
+      <p
+        className="sc-ePzlA-D ifuDMT sc-dSbvwS jLFnCT"
+        color="#B16663"
+        fontSize={12}
+        fontWeight="500"
+        onClick={[Function]}
+      >
+        Notifications are disabled. Click here to grant required permissions
+      </p>
+    </div>
+    <div
+      className="sc-ccVCaX fJHeJO"
+    >
+      <div
+        className="sc-jnqLxu hHovem"
+      >
+        <div
+          className="sc-ejWHKt fmxHYX"
+        >
+          <p
+            className="sc-ePzlA-D lbcyHB"
+            fontWeight="600"
+          >
+            Logout
+          </p>
+          <p
+            className="sc-ePzlA-D jSYaFQ"
+            color="#A4AAAF"
+            fontSize={11}
+            fontWeight="500"
+          >
+            Click below to logout the dashboard
+          </p>
+        </div>
+        <button
+          className="sc-dcrmVg kotmLE"
+          height="40px"
+          id="logoutBtn"
+          onClick={[Function]}
+        >
+          <p
+            className="sc-ePzlA-D fLRZEA"
+            fontSize={12}
+            fontWeight="600"
+          >
+            Logout
+          </p>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-jjRTzg gslEFu"
+  >
+    <div
+      className="sc-iRQbrd eeIqON"
+    >
+      <div
+        className="sc-XMxGW hEIGnj"
+      >
+        <div
+          className="sc-kPTPQs jiieSE"
+        >
+          <img
+            className="sc-ispOId eHznbG"
+            src={Object {}}
+          />
+          <input
+            className="sc-kcuKUB LwXuE"
+            onChange={[Function]}
+            placeholder="Search"
+          />
+        </div>
+      </div>
+      <div
+        className="sc-TJdGy cjOwfa"
+      >
+        <div
+          className="sc-eojhpR dAMxmL"
+          onClick={[Function]}
+        >
+          <img
+            className="sc-jlRNHb dKYKeX"
+            src={Object {}}
+          />
+        </div>
+        <div
+          className="sc-fFGjHI fiLKAe"
+        >
+          <label>
+            <input
+              accept="image/png, image/jpeg"
+              aria-label="File input"
+              className="sc-gxYJeL fcIGhX"
+              id="handleSelectedFileChanged"
+              onChange={[Function]}
+              type="file"
+            />
+            <div
+              className="sc-dicizt hLxdUU sc-DooS jRKZHN"
+              id="editOverlay"
+            >
+              <img
+                alt="avatar"
+                className="sc-ewnqHT sc-DooS jRKZHN"
+                id="defaultAvatar"
+                src={Object {}}
+              />
+              <img
+                alt="edit"
+                className="sc-iVCKna dSjaUI"
+                src={Object {}}
+              />
+            </div>
+          </label>
+        </div>
+      </div>
+      <div
+        className="sc-ffyeCz hIHYdN"
+        hidden={true}
+        onScroll={[Function]}
+      >
+        <div
+          className="sc-flsqHV hKdGbz"
+        >
+          <span
+            className="sc-hpzAOI TMXRk"
+          >
+            Notifications
+          </span>
+          <img
+            alt="Bell Icon"
+            className="sc-kjaWZf bTwOLq"
+            onClick={[Function]}
+            role="button"
+            src={Object {}}
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-bgrQFw gKErPa"
+    />
+  </div>
+</div>
+`;

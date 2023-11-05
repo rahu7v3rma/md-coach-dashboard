@@ -1,0 +1,2102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditGroupMembers GroupMembers snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="sc-dcrmVg iamxjk"
+      >
+        <div
+          class="sc-kuWgmH eTQZmA"
+        >
+          <div
+            class="sc-duSInm dqQKKA"
+          >
+            <h1
+              class="sc-jrrXlR btFNqT"
+            >
+              Add members
+            </h1>
+            <button
+              class="sc-crozmw kCVwml"
+            >
+              <img
+                alt="close"
+                src="./assets/icons/Close.png"
+              />
+            </button>
+          </div>
+          <div
+            class="sc-bgqQcB iOFIEC"
+          >
+            <img
+              class="sc-gTRrQi hmyRUp"
+              src="[object Object]"
+            />
+            <input
+              class="sc-ewnqHT edsCSP"
+              placeholder="Search"
+            />
+          </div>
+          <div
+            class="sc-fFGjHI eOxMwt"
+            id="group_members"
+          >
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-0"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-0"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-0"
+                >
+                  A B
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-0"
+                  style="color: rgb(58, 154, 0);"
+                >
+                  Online
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-0"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-1"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-1"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-1"
+                >
+                  52c94d3034d2c4defcf2997eb562724a9af015df0ae42da110b90f7267ac8659
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-1"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  7 days ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-1"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-2"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-2"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-2"
+                >
+                  a b
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-2"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  Offline
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-2"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-3"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-3"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-3"
+                >
+                  a b
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-3"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  a few seconds ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-3"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-4"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-4"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-4"
+                >
+                  Omry Ka
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-4"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  2 months ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-4"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-5"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-5"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-5"
+                >
+                  Coach Yaron Coach
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-5"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  2 months ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-5"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-6"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-6"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-6"
+                >
+                  a a
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-6"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  2 months ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-6"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-7"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-7"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-7"
+                >
+                  a a
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-7"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  a few seconds ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-7"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-8"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-8"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-8"
+                >
+                  A B
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-8"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  2 months ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-8"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-9"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-9"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-9"
+                >
+                  a b
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-9"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  2 months ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-9"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-10"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-10"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-10"
+                >
+                  a b
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-10"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  a month ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-10"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-11"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-11"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-11"
+                >
+                  OK KA
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-11"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  2 months ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-11"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-12"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-12"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-12"
+                >
+                  Omry K
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-12"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  2 months ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-12"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-13"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-13"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-13"
+                >
+                  Om Ka
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-13"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  2 months ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-13"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-14"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-14"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-14"
+                >
+                  Mor Customer #42
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-14"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  a few seconds ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-14"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-15"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-15"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-15"
+                >
+                  Mor Customer #41
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-15"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  a month ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-15"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-16"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-16"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-16"
+                >
+                  Mor Customer #40
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-16"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  a few seconds ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-16"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-17"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-17"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-17"
+                >
+                  Mor Customer #39
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-17"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  3 months ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-17"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-18"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-18"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-18"
+                >
+                  Mor Customer #38
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-18"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  a few seconds ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-18"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-19"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-19"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-19"
+                >
+                  Mor Custoemr #37
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-19"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  a few seconds ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-19"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-20"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-20"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-20"
+                >
+                  Mor Customer #36
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-20"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  a few seconds ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-20"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-21"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-21"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-21"
+                >
+                  Mor Customer #35
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-21"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  a few seconds ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-21"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-22"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-22"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-22"
+                >
+                  Omry Imperial
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-22"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  3 months ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-22"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-23"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-23"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-23"
+                >
+                  Omry Metirc
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-23"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  3 months ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-23"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-24"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-24"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-24"
+                >
+                  Omry3 Kaufman3
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-24"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  3 months ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-24"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-25"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-25"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-25"
+                >
+                  Omry2 Kaufman2
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-25"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  3 months ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-25"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-26"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-26"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-26"
+                >
+                  omry kaufman
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-26"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  3 months ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-26"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-27"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-27"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-27"
+                >
+                  omry kaufman
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-27"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  3 months ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-27"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-28"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-28"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-28"
+                >
+                  Mor Customer #34
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-28"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  a few seconds ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-28"
+                type="checkbox"
+              />
+            </div>
+            <div
+              class="sc-dicizt gZlZoQ"
+              id="memberItem-29"
+            >
+              <img
+                class="sc-iVCKna kotnLq"
+                id="memberAvatar-29"
+                src="[object Object]"
+              />
+              <div
+                class="sc-gxYJeL jSaeaH"
+              >
+                <span
+                  class="sc-kPTPQs eHlpGg"
+                  id="memberName-29"
+                >
+                  Mor Customer #33
+                </span>
+                <span
+                  class="sc-ispOId hbVesF"
+                  id="memberStatus-29"
+                  style="color: rgb(164, 170, 175);"
+                >
+                  3 months ago
+                </span>
+              </div>
+              <input
+                class="sc-kcuKUB gtioL"
+                id="checkbox-29"
+                type="checkbox"
+              />
+            </div>
+          </div>
+          <div
+            class="sc-eywOmQ ibelAq"
+          />
+          <div
+            class="sc-eAzDjm fa-dceY"
+          >
+            <button
+              class="sc-fABZjn kClLPP cancel"
+            >
+              Cancel
+            </button>
+            <button
+              class="sc-fABZjn kClLPP next"
+            >
+              Add Members
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="sc-dcrmVg iamxjk"
+    >
+      <div
+        class="sc-kuWgmH eTQZmA"
+      >
+        <div
+          class="sc-duSInm dqQKKA"
+        >
+          <h1
+            class="sc-jrrXlR btFNqT"
+          >
+            Add members
+          </h1>
+          <button
+            class="sc-crozmw kCVwml"
+          >
+            <img
+              alt="close"
+              src="./assets/icons/Close.png"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-bgqQcB iOFIEC"
+        >
+          <img
+            class="sc-gTRrQi hmyRUp"
+            src="[object Object]"
+          />
+          <input
+            class="sc-ewnqHT edsCSP"
+            placeholder="Search"
+          />
+        </div>
+        <div
+          class="sc-fFGjHI eOxMwt"
+          id="group_members"
+        >
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-0"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-0"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-0"
+              >
+                A B
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-0"
+                style="color: rgb(58, 154, 0);"
+              >
+                Online
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-0"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-1"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-1"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-1"
+              >
+                52c94d3034d2c4defcf2997eb562724a9af015df0ae42da110b90f7267ac8659
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-1"
+                style="color: rgb(164, 170, 175);"
+              >
+                7 days ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-1"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-2"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-2"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-2"
+              >
+                a b
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-2"
+                style="color: rgb(164, 170, 175);"
+              >
+                Offline
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-2"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-3"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-3"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-3"
+              >
+                a b
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-3"
+                style="color: rgb(164, 170, 175);"
+              >
+                a few seconds ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-3"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-4"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-4"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-4"
+              >
+                Omry Ka
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-4"
+                style="color: rgb(164, 170, 175);"
+              >
+                2 months ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-4"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-5"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-5"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-5"
+              >
+                Coach Yaron Coach
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-5"
+                style="color: rgb(164, 170, 175);"
+              >
+                2 months ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-5"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-6"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-6"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-6"
+              >
+                a a
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-6"
+                style="color: rgb(164, 170, 175);"
+              >
+                2 months ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-6"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-7"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-7"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-7"
+              >
+                a a
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-7"
+                style="color: rgb(164, 170, 175);"
+              >
+                a few seconds ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-7"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-8"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-8"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-8"
+              >
+                A B
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-8"
+                style="color: rgb(164, 170, 175);"
+              >
+                2 months ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-8"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-9"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-9"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-9"
+              >
+                a b
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-9"
+                style="color: rgb(164, 170, 175);"
+              >
+                2 months ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-9"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-10"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-10"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-10"
+              >
+                a b
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-10"
+                style="color: rgb(164, 170, 175);"
+              >
+                a month ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-10"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-11"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-11"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-11"
+              >
+                OK KA
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-11"
+                style="color: rgb(164, 170, 175);"
+              >
+                2 months ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-11"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-12"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-12"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-12"
+              >
+                Omry K
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-12"
+                style="color: rgb(164, 170, 175);"
+              >
+                2 months ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-12"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-13"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-13"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-13"
+              >
+                Om Ka
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-13"
+                style="color: rgb(164, 170, 175);"
+              >
+                2 months ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-13"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-14"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-14"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-14"
+              >
+                Mor Customer #42
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-14"
+                style="color: rgb(164, 170, 175);"
+              >
+                a few seconds ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-14"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-15"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-15"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-15"
+              >
+                Mor Customer #41
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-15"
+                style="color: rgb(164, 170, 175);"
+              >
+                a month ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-15"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-16"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-16"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-16"
+              >
+                Mor Customer #40
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-16"
+                style="color: rgb(164, 170, 175);"
+              >
+                a few seconds ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-16"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-17"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-17"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-17"
+              >
+                Mor Customer #39
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-17"
+                style="color: rgb(164, 170, 175);"
+              >
+                3 months ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-17"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-18"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-18"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-18"
+              >
+                Mor Customer #38
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-18"
+                style="color: rgb(164, 170, 175);"
+              >
+                a few seconds ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-18"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-19"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-19"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-19"
+              >
+                Mor Custoemr #37
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-19"
+                style="color: rgb(164, 170, 175);"
+              >
+                a few seconds ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-19"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-20"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-20"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-20"
+              >
+                Mor Customer #36
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-20"
+                style="color: rgb(164, 170, 175);"
+              >
+                a few seconds ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-20"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-21"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-21"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-21"
+              >
+                Mor Customer #35
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-21"
+                style="color: rgb(164, 170, 175);"
+              >
+                a few seconds ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-21"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-22"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-22"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-22"
+              >
+                Omry Imperial
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-22"
+                style="color: rgb(164, 170, 175);"
+              >
+                3 months ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-22"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-23"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-23"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-23"
+              >
+                Omry Metirc
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-23"
+                style="color: rgb(164, 170, 175);"
+              >
+                3 months ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-23"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-24"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-24"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-24"
+              >
+                Omry3 Kaufman3
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-24"
+                style="color: rgb(164, 170, 175);"
+              >
+                3 months ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-24"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-25"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-25"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-25"
+              >
+                Omry2 Kaufman2
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-25"
+                style="color: rgb(164, 170, 175);"
+              >
+                3 months ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-25"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-26"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-26"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-26"
+              >
+                omry kaufman
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-26"
+                style="color: rgb(164, 170, 175);"
+              >
+                3 months ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-26"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-27"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-27"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-27"
+              >
+                omry kaufman
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-27"
+                style="color: rgb(164, 170, 175);"
+              >
+                3 months ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-27"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-28"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-28"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-28"
+              >
+                Mor Customer #34
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-28"
+                style="color: rgb(164, 170, 175);"
+              >
+                a few seconds ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-28"
+              type="checkbox"
+            />
+          </div>
+          <div
+            class="sc-dicizt gZlZoQ"
+            id="memberItem-29"
+          >
+            <img
+              class="sc-iVCKna kotnLq"
+              id="memberAvatar-29"
+              src="[object Object]"
+            />
+            <div
+              class="sc-gxYJeL jSaeaH"
+            >
+              <span
+                class="sc-kPTPQs eHlpGg"
+                id="memberName-29"
+              >
+                Mor Customer #33
+              </span>
+              <span
+                class="sc-ispOId hbVesF"
+                id="memberStatus-29"
+                style="color: rgb(164, 170, 175);"
+              >
+                3 months ago
+              </span>
+            </div>
+            <input
+              class="sc-kcuKUB gtioL"
+              id="checkbox-29"
+              type="checkbox"
+            />
+          </div>
+        </div>
+        <div
+          class="sc-eywOmQ ibelAq"
+        />
+        <div
+          class="sc-eAzDjm fa-dceY"
+        >
+          <button
+            class="sc-fABZjn kClLPP cancel"
+          >
+            Cancel
+          </button>
+          <button
+            class="sc-fABZjn kClLPP next"
+          >
+            Add Members
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
