@@ -22,14 +22,14 @@ const ButtonImg = styled.img`
 `;
 
 const Dot = styled('div')<{ dotPosition: boolean }>`
-    background: #4dba0b;
+    background: ${Colors.extra.kellyGreen};
     width: 10px;
     height: 10px;
     border-radius: 2em;
     position: absolute;
     top: 0;
     ${(props) => (props.dotPosition ? 'right: 0;' : 'left: 0;')};
-    border: 2px solid #fff;
+    border: 2px solid ${Colors.extra.white};
 `;
 
 interface Props {

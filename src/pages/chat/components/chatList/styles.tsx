@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
+import { Colors } from 'src/utils/colors';
+
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     width: 35%;
+    min-width: 30%;
 
     .str-chat-channel-list {
         background-color: transparent;
@@ -29,11 +32,11 @@ export const ListContainer = styled.div`
 export const AddButton = styled.button`
     height: 40px;
     min-height: 40px;
-    background: #6e51d0;
-    background: #f5f8fb;
+    background: ${Colors.extra.slateBlue};
+    background: ${Colors.extra.white1};
     border-width: 1px 1px 2px 1px;
     border-style: solid;
-    border-color: #d3e6f8;
+    border-color: ${Colors.theme.lightSkyBlue};
     border-radius: 16px;
     display: flex;
     flex-direction: row;
@@ -55,6 +58,12 @@ export const AddButton = styled.button`
         font-size: 12px;
         line-height: 18px;
         text-align: center;
-        color: #6e51d0;
+        color: ${Colors.extra.slateBlue};
     }
+`;
+
+export const LoaderContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;

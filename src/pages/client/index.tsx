@@ -1,17 +1,27 @@
 import { useEffect, useState } from 'react';
+import { SortOrder, TableColumn } from 'react-data-table-component';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { useDebounce } from 'use-debounce';
 
 import ClientIcon from 'src/assets/client-icon.svg';
 import { useAppDispatch } from 'src/hooks';
-import { ClientSelectors, getClients } from 'src/reducers/client';
+import {
+    ClientSelectors,
+    getClients,
+    sortGroupOrder,
+    sortOrder
+} from 'src/reducers/client';
+import { GroupSelectors, fetchGroupsList } from 'src/reducers/group';
 import { getProfile } from 'src/reducers/user';
 import { hasAuthToken } from 'src/services/auth';
-import { DashboardLayout, Loader, Text } from 'src/shared';
+import { DashboardLayout, Text } from 'src/shared';
+import { Size } from 'src/shared/text';
+import { UserClient, UserGroup } from 'src/types/user';
 import { Colors } from 'src/utils/colors';
 
 import DataTable from './components/datatable';
+import GroupDataTable from './components/groupTable';
 
 const TableHeader = styled.div`
     margin-top: 12px;
@@ -40,12 +50,49 @@ const ClientImg = styled.img`
 
 const Client = () => {
     const dispatch = useAppDispatch();
-    const { clients, searchInput, totalCount, loading } = ClientSelectors();
+    const {
+        clients,
+        searchInput,
+        totalCount,
+        loading,
+        sortBy,
+        order,
+        groupSortBy,
+        groupOrder
+    } = ClientSelectors();
+    const { groups } = GroupSelectors();
     const navigate = useNavigate();
 
     const [page, setPage] = useState(1);
-    const [limit, setLimit] = useState(10);
+    const [limit, setLimit] = useState(50);
     const [value] = useDebounce(searchInput, 1500);
+    useEffect(() => {
+        dispatch(fetchGroupsList({}));
+    }, [dispatch]);
+
+    const handleSort = async (
+        column: TableColumn<UserClient>,
+        sortDirection: SortOrder
+    ) => {
+        dispatch(
+            sortOrder({
+                sortBy: column.id as number,
+                order: sortDirection
+            })
+        );
+    };
+
+    const handleGroupSort = async (
+        column: TableColumn<UserGroup>,
+        sortDirection: SortOrder
+    ) => {
+        dispatch(
+            sortGroupOrder({
+                sortBy: column.id as number,
+                order: sortDirection
+            })
+        );
+    };
 
     useEffect(() => {
         if (!hasAuthToken()) {
@@ -60,21 +107,36 @@ const Client = () => {
             getClients({
                 page: page,
                 limit: limit,
-                search: value
+                search: value,
+                sortBy: sortBy,
+                order: order
             })
         );
-    }, [dispatch, limit, page, value]);
+    }, [dispatch, limit, page, value, sortBy, order]);
 
     return (
         <DashboardLayout>
+            <GroupDataTable
+                data={
+                    groups?.filter((item) =>
+                        item.name
+                            .toLowerCase()
+                            .includes(searchInput.toLowerCase())
+                    ) ?? []
+                }
+                sortBy={groupSortBy}
+                order={groupOrder}
+                handleSort={handleGroupSort}
+                loading={loading}
+            />
             <TableHeader>
                 <Text
-                    color={Colors.extra.black}
-                    fontSize={32}
+                    color={Colors.extra.darkLiver}
+                    fontSize={Size.Medium}
                     fontWeight="700"
                     lineHeight="36px"
                 >
-                    My Clients
+                    My Private Clients
                 </Text>
                 <TotalCount>
                     <ClientImg
@@ -84,8 +146,8 @@ const Client = () => {
                         width={16}
                     />
                     <Text
-                        color="#271A51"
-                        fontSize={14}
+                        color={Colors.extra.blackText}
+                        fontSize={Size.X2Small}
                         fontWeight="500"
                         lineHeight="20px"
                     >
@@ -93,26 +155,28 @@ const Client = () => {
                     </Text>
                 </TotalCount>
             </TableHeader>
-            {loading ? (
-                <Loader />
-            ) : (
-                <DataTable
-                    totalCount={totalCount}
-                    data={clients}
-                    currentPage={page}
-                    pagination={true}
-                    onChangePage={(val) => {
-                        if (!val) {
-                            setPage(page - 1);
-                        } else {
-                            setPage(val);
-                        }
-                    }}
-                    onChangeRowsPerPage={(val) => {
-                        setLimit(val);
-                    }}
-                />
-            )}
+            <DataTable
+                totalCount={totalCount}
+                data={loading ? [] : clients}
+                limit={limit}
+                currentPage={page}
+                sortBy={sortBy}
+                order={order}
+                pagination={true}
+                onChangePage={(val) => {
+                    if (!val) {
+                        setPage(page - 1);
+                    } else {
+                        setPage(val);
+                    }
+                }}
+                onChangeRowsPerPage={(val) => {
+                    setPage(1);
+                    setLimit(val);
+                }}
+                handleSort={handleSort}
+                loading={loading}
+            />
         </DashboardLayout>
     );
 };

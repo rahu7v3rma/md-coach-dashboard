@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import clientReducer from './reducers/client';
+import groupReducer from './reducers/group';
 import notificationReducer from './reducers/notification';
 import userReducer from './reducers/user';
 
@@ -9,7 +10,8 @@ const storeOptions: any = {
     reducer: {
         user: userReducer,
         client: clientReducer,
-        notification: notificationReducer
+        notification: notificationReducer,
+        group: groupReducer
     }
 };
 

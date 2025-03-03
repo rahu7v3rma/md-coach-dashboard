@@ -1,4 +1,7 @@
+import { SortOrder } from 'react-data-table-component';
+
 import { BASE_API_URL, COMMON } from '../utils/common';
+import { CLIENTS_TABLE_COLUMNS } from 'src/utils/constants';
 
 import {
     AUTHORIZATION_HEADER_NAME,
@@ -16,14 +19,20 @@ const API_END_POINT = {
     RESET_PASSWORD_CONFIRM: 'user/reset/confirm',
     REFRESH_PROFILE_SESSION: 'profile/session',
     IMAGE_UPLOAD: 'image/upload',
-    GET_LOGBOOK: 'log/recent?page={0}&limit={1}&user_id={2}',
+    GET_LOGBOOK: 'log/recent?page={0}&limit={1}&user_id={2}&category={3}',
     USER_INFO: 'user/{id}',
     GET_CLIENTS: 'user/customers',
     GET_PROFILE: 'profile/',
     UPDATE_PROFILE: 'profile/',
     NOTIFICATION_LIST: 'user/notification?page={0}&limit={1}',
     READ_NOTIFICATION: 'user/notification/{0}',
-    LOGOUT_USER: 'user/logout'
+    LOGOUT_USER: 'user/logout',
+    GET_GROUPS_LIST: 'chat/groups',
+    GET_NOTES: 'user/{0}/notes?page={1}&limit={2}',
+    ADD_NOTE: 'meeting_notes/',
+    DELETE_NOTE: 'meeting_notes/{0}',
+    UPDATE_NOTE: 'meeting_notes/{0}',
+    USER_ANALYTICS: 'user/{0}/analytics'
 };
 
 function _resetAbortController() {
@@ -45,10 +54,17 @@ export function abortPreviousRequests(): void {
 export const getLogBook = async (
     page: number,
     limit: number,
-    user_id: string
+    user_id: string,
+    category: string
 ) => {
     return await _callAuthenticatedAPI(
-        COMMON.stringFormat(API_END_POINT.GET_LOGBOOK, page, limit, user_id)
+        COMMON.stringFormat(
+            API_END_POINT.GET_LOGBOOK,
+            page,
+            limit,
+            user_id,
+            category
+        )
     );
 };
 
@@ -94,10 +110,13 @@ export function refreshProfileSession(): Promise<any> {
 export function getClients(
     page: number,
     limit: number,
-    search: string
+    search: string,
+    sortBy: number,
+    order: SortOrder
 ): Promise<any> {
+    let sortByValue = sortBy ? CLIENTS_TABLE_COLUMNS[sortBy - 1] : '';
     const apiPath = API_END_POINT.GET_CLIENTS.concat(
-        `?page=${page}&limit=${limit}&search=${search}`
+        `?page=${page}&limit=${limit}&search=${search}&sort_by=${sortByValue}&order=${order}`
     );
     return _callAuthenticatedAPI(apiPath);
 }
@@ -115,6 +134,18 @@ export function getUserInfo(id: string): Promise<any> {
     const endpoint = API_END_POINT.USER_INFO.replace('{id}', id);
     return _callAuthenticatedAPI(endpoint);
 }
+
+export const getUserAnalytics = async (
+    id: number | string,
+    startDate: string,
+    endDate: string
+): Promise<any> => {
+    return await _callAuthenticatedAPI(
+        COMMON.stringFormat(API_END_POINT.USER_ANALYTICS, id).concat(
+            `?start_date=${startDate}&end_date=${endDate}`
+        )
+    );
+};
 
 export const getProfile = async () => {
     return await _callAuthenticatedAPI(API_END_POINT.GET_PROFILE);
@@ -140,6 +171,52 @@ export const readNotification = async (id: number) => {
     return await _callAuthenticatedAPI(
         COMMON.stringFormat(API_END_POINT.READ_NOTIFICATION, id),
         'PATCH'
+    );
+};
+
+export const getGroupsList = async () => {
+    return await _callAuthenticatedAPI(
+        COMMON.stringFormat(API_END_POINT.GET_GROUPS_LIST),
+        'GET'
+    );
+};
+
+export const getNotes = async (
+    page: number,
+    limit: number,
+    clientId: string
+) => {
+    return await _callAuthenticatedAPI(
+        COMMON.stringFormat(API_END_POINT.GET_NOTES, clientId, page, limit)
+    );
+};
+
+export const addNote = async (customer_id: number, content: string) => {
+    return await _callAuthenticatedAPI(API_END_POINT.ADD_NOTE, 'POST', {
+        customer_id,
+        content
+    });
+};
+
+export const deleteNote = async (id: number) => {
+    return await _callAuthenticatedAPI(
+        COMMON.stringFormat(API_END_POINT.DELETE_NOTE, id),
+        'DELETE'
+    );
+};
+
+export const updateNote = async (
+    id: number,
+    customer_id: number,
+    content: string
+) => {
+    return await _callAuthenticatedAPI(
+        COMMON.stringFormat(API_END_POINT.UPDATE_NOTE, id),
+        'PATCH',
+        {
+            customer_id,
+            content
+        }
     );
 };
 

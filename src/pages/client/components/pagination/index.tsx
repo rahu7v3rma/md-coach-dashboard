@@ -21,7 +21,7 @@ const PaginationComponent = (props: PaginationComponentProps) => {
     const rowsOnCurrentPageFrom = currentPage * rowsPerPage - (rowsPerPage - 1);
     const rowsOnCurrentPageTo = currentPage * rowsPerPage;
     const totalRows = rowCount;
-    const options = [10, 20];
+    const options = [10, 20, 50, 100];
     const onPrevious = () => {
         if (currentPage > 1) {
             onChangePage(previousPageNumber, totalRows);
@@ -64,7 +64,7 @@ const PaginationComponent = (props: PaginationComponentProps) => {
                 >
                     Previous
                 </PaginationButton>
-                <Text color="#babfc3">
+                <Text color={Colors.extra.silverSand}>
                     {' '}
                     {currentPage} of {totalPages}{' '}
                 </Text>

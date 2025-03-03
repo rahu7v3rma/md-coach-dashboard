@@ -29,13 +29,5 @@ exports[`GroupDetailsMemberListItem GroupDetailsMemberListItem snapshot 1`] = `
       id="memberStatus"
     />
   </div>
-  <img
-    alt="dots"
-    className="sc-kuWgmH iLegWu"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    onMouseDown={[Function]}
-    src={Object {}}
-  />
 </div>
 `;

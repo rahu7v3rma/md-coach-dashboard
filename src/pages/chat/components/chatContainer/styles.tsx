@@ -19,10 +19,10 @@ export const MessageContainer = styled.div`
     border-color: ${Colors.extra.lighter};
     border-radius: 16px;
     height: 100%;
-    background: #fff;
+    background: ${Colors.extra.white};
 
     &&& .str-chat.messaging {
-        background: #fff;
+        background: ${Colors.extra.white};
         border-radius: 0 0 16px 16px;
         height: 100%;
     }

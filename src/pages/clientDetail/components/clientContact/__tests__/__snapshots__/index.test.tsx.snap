@@ -15,6 +15,7 @@ exports[`ClientContact ClientContact Snapshot 1`] = `
     <p
       className="sc-gTRrQi eWXWTs"
       color="#271A51"
+      data-testid="phone_number"
       fontSize={16}
       fontWeight="500"
     />
@@ -30,6 +31,7 @@ exports[`ClientContact ClientContact Snapshot 1`] = `
     <p
       className="sc-gTRrQi eWXWTs"
       color="#271A51"
+      data-testid="email"
       fontSize={16}
       fontWeight="500"
     />

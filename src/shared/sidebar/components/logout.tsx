@@ -20,7 +20,7 @@ const Container = styled.div`
 
 const LogoutContainer = styled.div`
     display: flex;
-    border: 1px solid rgb(240, 244, 230);
+    border: 1px solid ${Colors.extra.lighter};
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ const LogoutContainer = styled.div`
     width: 100%;
     margin-bottom: auto;
     border-radius: 30px;
-    background: ${Colors.extra.lightest};
+    background: ${Colors.theme.primaryLightest};
     padding: 16px;
     gap: 16px;
 `;
@@ -69,12 +69,12 @@ const Logout: FunctionComponent<Props> = ({}: Props) => {
                         </Text>
                         <Text
                             fontWeight="500"
-                            fontSize={Size.XXXXSmall}
+                            fontSize={Size.X4Small}
                             lineHeight="16px"
                             textAlign="center"
-                            color={Colors.extra.grayLight}
+                            color={Colors.theme.gray}
                         >
-                            Click below to logout the dashboard
+                            Click below to log out of the dashboard
                         </Text>
                     </LogoutTextContainer>
                     <Button
@@ -86,7 +86,7 @@ const Logout: FunctionComponent<Props> = ({}: Props) => {
                         <Text
                             lineHeight="18px"
                             fontWeight="600"
-                            fontSize={Size.XXXSmall}
+                            fontSize={Size.X3Small}
                         >
                             Logout
                         </Text>

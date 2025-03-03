@@ -23,10 +23,17 @@ const ChatHeader: FunctionComponent<Props> = ({
 
     return (
         <Wrapper>
-            <ChatTitle>{displayTitle}</ChatTitle>
+            <ChatTitle data-testid="chat-title">{displayTitle}</ChatTitle>
             <ButtonsGroup>
-                <Button onClick={onCollapseButtonCallback}>
-                    <img alt="collapse" src={CollapseIcon} />
+                <Button
+                    data-testid="collapse-button"
+                    onClick={onCollapseButtonCallback}
+                >
+                    <img
+                        data-testid="collapse-icon"
+                        alt="collapse"
+                        src={CollapseIcon}
+                    />
                 </Button>
             </ButtonsGroup>
         </Wrapper>

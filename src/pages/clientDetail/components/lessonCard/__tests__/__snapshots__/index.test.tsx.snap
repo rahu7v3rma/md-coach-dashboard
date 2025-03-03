@@ -10,6 +10,7 @@ exports[`Snapshot 1`] = `
     <img
       alt="icon"
       class="sc-cNNTdL enpNFh"
+      data-testid="lesson_image"
       src="imageUrl"
     />
     <div
@@ -18,6 +19,7 @@ exports[`Snapshot 1`] = `
       <p
         class="sc-jJTsDX iVQlaw"
         color="#271A51"
+        data-testid="lesson_title"
         font-weight="700"
       >
         title
@@ -25,6 +27,7 @@ exports[`Snapshot 1`] = `
       <p
         class="sc-jJTsDX eWOEaN"
         color="#A4AAAF"
+        data-testid="lesson_subtitle"
         font-size="12"
         font-weight="300"
       >

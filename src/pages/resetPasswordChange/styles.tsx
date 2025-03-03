@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background: #f5f8fb;
+    background: ${Colors.extra.white1};
     overflow: hidden;
 `;
 
@@ -16,13 +16,13 @@ export const AllRightsText = styled.span`
     font-weight: 400;
     font-size: 12px;
     text-align: center;
-    color: #a4aaaf;
+    color: ${Colors.theme.gray};
     margin: 2em auto;
 `;
 
 export const FormCard = styled('div')`
     background: ${Colors.extra.white};
-    border: 1px solid #eef4fa;
+    border: 1px solid ${Colors.extra.aliceBlue};
     border-radius: 16px;
     box-sizing: border-box;
     display: flex;
@@ -44,13 +44,13 @@ export const TitleText = styled.span`
     font-weight: 800;
     font-size: 28px;
     line-height: 36px;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
     text-align: center;
     margin-bottom: 0.5em;
 `;
 
 export const DetailsText = styled.span`
-    color: #58595a;
+    color: ${Colors.extra.davysGrey};
     font-size: 16px;
     line-height: 22px;
     text-align: center;
@@ -62,7 +62,7 @@ export const Text = styled.span`
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
     margin: 0px;
     padding: 0px;
     text-align: center;

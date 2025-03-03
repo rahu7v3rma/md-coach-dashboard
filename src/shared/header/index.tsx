@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useEffect } from 'react';
 import styled from 'styled-components';
 
 import ProfileImage from '../profileImage';
@@ -16,26 +16,30 @@ interface PopUpModel {
     hidden: boolean;
 }
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.div(
+    ({ width = '100%' }: { width?: string }) => `
     display: flex;
-    width: 100%;
+    width: ${width};
     background: transparent;
-`;
+`
+);
 
-const Container = styled.div`
+const Container = styled.div(
+    ({ margin = '45px 40px 0 auto' }: { margin?: string }) => `
     display: flex;
     margin-left: auto;
-    margin: 45px 40px 0 auto;
-`;
+    margin: ${margin};
+`
+);
 
 const PopUp = styled.div`
-    background: #fff;
+    background: ${Colors.extra.white};
     position: absolute !important;
     width: 400px;
     height: 622px;
     right: 100px;
     top: 100px;
-    border: 1px solid ${Colors.theme.light_sky_blue};
+    border: 1px solid ${Colors.theme.lightSkyBlue};
     border-radius: 1em;
     display: ${(p: PopUpModel) => (p.hidden ? 'none' : 'block')};
     z-index: 11;
@@ -69,10 +73,12 @@ const HeaderIcon = styled.img`
     cursor: pointer;
 `;
 
-const SearchDiv = styled.div`
+const SearchDiv = styled.div(
+    ({ isDisplaySearchBox = true }: { isDisplaySearchBox?: boolean }) => `
     margin: 40px 0 0 40px;
-`;
-
+    display: ${isDisplaySearchBox ? 'flex' : 'none'}
+`
+);
 const NotificationDiv = styled.div`
     width: 48px;
     height: 48px;
@@ -119,35 +125,45 @@ interface Props {
     handleScroll?: () => void;
     hidden?: boolean;
     onClose?: () => void;
+    isDisplaySearchBox?: boolean;
+    hideProfile?: boolean;
 }
 
 const Header: FunctionComponent<Props> = ({
     handleToggle,
     handleScroll,
     hidden = false,
-    onClose
+    onClose,
+    isDisplaySearchBox = true,
+    hideProfile = false
 }) => {
     const dispatch = useAppDispatch();
     const { notifications, unreadCount } = NotificationSelectors();
     const { list } = notifications;
 
+    useEffect(() => {
+        dispatch(onSearchChange(''));
+    }, [dispatch]);
+
     return (
-        <HeaderContainer>
-            <SearchDiv>
+        <HeaderContainer width={!isDisplaySearchBox ? 'auto' : '100%'}>
+            <SearchDiv isDisplaySearchBox={isDisplaySearchBox}>
                 <SearchBox
                     onChange={(value) => {
                         dispatch(onSearchChange(value));
                     }}
                 />
             </SearchDiv>
-            <Container>
+            <Container
+                margin={!isDisplaySearchBox ? 'auto' : '45px 40px 0 auto'}
+            >
                 <NotificationDiv onClick={handleToggle}>
                     {unreadCount > 0 && (
                         <NotificationDot>{unreadCount}</NotificationDot>
                     )}
                     <NotificationIcon src={BellIcon} />
                 </NotificationDiv>
-                <ProfileAvatar width={48} height={48} />
+                {!hideProfile && <ProfileAvatar width={48} height={48} />}
             </Container>
             <PopUp hidden={hidden} onScroll={handleScroll}>
                 <>

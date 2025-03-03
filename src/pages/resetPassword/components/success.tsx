@@ -9,7 +9,7 @@ const SuccessImage = styled.div`
     width: 96px;
     height: 96px;
     background: ${Colors.theme.primary};
-    border: 1px solid #dfeed8;
+    border: 1px solid ${Colors.extra.chineseWhite};
     border-radius: 32px;
     margin-top: 48px;
     display: flex;
@@ -31,7 +31,7 @@ const SuccessTitle = styled.h1`
     font-size: 28px;
     line-height: 36px;
     text-align: center;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
     margin-top: 40px;
 `;
 
@@ -42,7 +42,7 @@ const SuccessDescription = styled.p`
     font-weight: 400;
     font-size: 16px;
     text-align: center;
-    color: #58595a;
+    color: ${Colors.extra.davysGrey};
     padding: 0px;
     margin: 0px;
 `;

@@ -26,7 +26,7 @@ export const GroupMemberName = styled.h1`
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
     margin: 0;
 `;
 
@@ -37,7 +37,7 @@ export const GroupMemberStatus = styled('p')<{ online?: boolean }>`
     font-size: 12px;
     line-height: 18px;
     color: ${({ online }) =>
-        online ? Colors.extra.black : Colors.extra.greyLight};
+        online ? Colors.extra.darkLiver : Colors.theme.gray};
     margin: 0;
     margin-top: 2px;
 `;
@@ -81,12 +81,12 @@ export const Menu = styled(MenuInner)`
         border-radius: 6px;
         padding: 0.375rem 0.625rem;
         list-style-type: none;
-        background-color: #fff;
+        background-color: ${Colors.extra.white};
     }
 
     ${menuItemSelector.hover} {
-        color: #fff;
-        background-color: #59a2ff;
+        color: ${Colors.extra.white};
+        background-color: ${Colors.extra.blueJeans};
     }
 `;
 

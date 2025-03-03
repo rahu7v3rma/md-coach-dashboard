@@ -1,10 +1,13 @@
 import { ButtonHTMLAttributes, FunctionComponent } from 'react';
 import styled from 'styled-components';
 
+import { Size } from '../text';
+import { Colors } from 'src/utils/colors';
+
 const StyledButton = styled.button<ButtonProps>`
     border: ${(props) => props.border || '1px solid'};
     border-radius: ${(props) => props.borderRadius || '12px'};
-    font-size: ${(props) => `${props.fontSize || 14}px`};
+    font-size: ${(props) => `${props.fontSize || Size.X2Small}px`};
     padding: ${(props) => props.padding || '1em 1.5em'};
     width: ${(props) => props.width || '100%'};
     height: ${(props) => props.height};
@@ -12,14 +15,16 @@ const StyledButton = styled.button<ButtonProps>`
     ${(props) =>
         props.disabled
             ? `
-                color: ${props.color || '#a4aaaf'};
-                background: ${props.backgroundColor || '#72996b'};
-                border-color: ${props.borderColor || '#72996b'};
+                color: ${props.color || Colors.theme.gray};
+                background: ${props.backgroundColor || Colors.theme.primary};
+                border-color: ${props.borderColor || Colors.theme.primary};
             `
             : `
-                color: ${props.color || '#fff'};
-                background-color: ${props.backgroundColor || '#72996b'};
-                border-color: ${props.borderColor || '#72996b'};
+                color: ${props.color || Colors.extra.white};
+                background-color: ${
+                    props.backgroundColor || Colors.theme.primary
+                };
+                border-color: ${props.borderColor || Colors.theme.primary};
                 cursor: pointer;
                 &:hover {
                     transform: scale(1.01);
@@ -28,7 +33,11 @@ const StyledButton = styled.button<ButtonProps>`
 
     ${(props) =>
         props.isBoxShadow
-            ? `box-shadow: ${props.boxShadow || '0px 2px 0px #5a3dbf'};`
+            ? `box-shadow: ${
+                  props.boxShadow ||
+                  `0px 2px 0px ${Colors.extra.oceanBlue}
+            `
+              };`
             : ``}
 `;
 

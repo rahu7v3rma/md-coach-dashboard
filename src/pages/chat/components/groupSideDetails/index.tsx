@@ -111,9 +111,6 @@ const GroupSideDetails: FunctionComponent<Props> = ({
                     <GroupDetailsMemberListItem
                         key={`member-${memberId}`}
                         user={channel.state.members[memberId].user}
-                        onRemoveMember={() => {
-                            channel.removeMembers([memberId]).then();
-                        }}
                     />
                 ))}
             </TeamMemberList>

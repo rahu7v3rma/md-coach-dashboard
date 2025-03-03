@@ -17,7 +17,7 @@ export const Wrapper = styled.div<{ active?: boolean }>`
     ${({ active }) =>
         active &&
         `
-            background: ${Colors.extra.lightest};
+            background: ${Colors.theme.primaryLightest};
     `};
 `;
 
@@ -43,7 +43,7 @@ export const Name = styled.h1`
     font-size: 16px;
     line-height: 22px;
     flex: 1;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -56,7 +56,7 @@ export const MessageTime = styled.div`
     font-weight: 500;
     font-size: 11px;
     line-height: 22px;
-    color: ${Colors.extra.greyLight};
+    color: ${Colors.theme.gray};
 `;
 
 export const LastMessageCountView = styled.div`
@@ -71,7 +71,7 @@ export const LastMessage = styled.div`
     font-weight: 500;
     font-size: 11px;
     line-height: 16px;
-    color: ${Colors.extra.greyLight};
+    color: ${Colors.theme.gray};
     flex: 1;
     overflow: hidden;
     white-space: nowrap;
@@ -90,7 +90,7 @@ export const MessageCount = styled.div`
     background: ${Colors.theme.primary};
     border-radius: 50%;
     display: flex;
-    color: #ffffff;
+    color: ${Colors.extra.white};
     align-items: center;
     justify-content: center;
     font-family: 'Poppins';

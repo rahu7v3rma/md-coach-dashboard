@@ -2,6 +2,7 @@ import { FunctionComponent } from 'react';
 import styled from 'styled-components';
 
 import Tick from '../../../assets/images/Tick.svg';
+import { Colors } from 'src/utils/colors';
 
 type Props = Record<string, never>;
 
@@ -9,8 +10,8 @@ const SuccessImage = styled.div`
     box-sizing: border-box;
     width: 96px;
     height: 96px;
-    background: #72996b;
-    border: 1px solid #dfeed8;
+    background: ${Colors.theme.primary};
+    border: 1px solid ${Colors.extra.chineseWhite};
     border-radius: 32px;
     margin-top: 48px;
     display: flex;
@@ -32,7 +33,7 @@ const SuccessTitle = styled.h1`
     font-size: 28px;
     line-height: 36px;
     text-align: center;
-    color: #4d4f4d;
+    color: ${Colors.extra.darkLiver};
     margin-top: 40px;
     margin-bottom: 40px;
 `;

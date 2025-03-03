@@ -11,7 +11,7 @@ export const BubbleContainer = styled('div')<{ isSender: Boolean }>`
     margin-bottom: 0.5em;
     padding: 8px;
     background: ${(props) =>
-        props.isSender ? Colors.extra.lightest : Colors.extra.light_2};
+        props.isSender ? Colors.theme.primaryLightest : Colors.extra.light2};
     border-radius: ${(props) =>
         props.isSender ? '16px 0px 16px 16px' : '0px 16px 16px 16px'};
     box-sizing: border-box;
@@ -27,7 +27,7 @@ export const BubbleContainer = styled('div')<{ isSender: Boolean }>`
         display: block;
         min-height: 32px;
         font-size: 15px;
-        color: black;
+        color: ${Colors.extra.black};
         border-radius: 0;
         border: 0px;
         margin-left: 0;
@@ -35,7 +35,7 @@ export const BubbleContainer = styled('div')<{ isSender: Boolean }>`
         p {
             font-size: 15px;
             line-height: 18px;
-            color: #000000;
+            color: ${Colors.extra.black};
             margin-bottom: 0;
         }
     }
@@ -51,6 +51,14 @@ export const ChatMessageWrapper = styled('div')<{ isSender: Boolean }>`
     flex-direction: ${(props) => (props.isSender ? 'row-reverse' : 'row')};
     justify-content: ${(props) => (props.isSender ? 'right ' : 'left')};
     align-items: center;
+    &:hover {
+        & .str-chat__message-simple__actions__action {
+            display: flex;
+        }
+    }
+    & .str-chat__message-reactions-list-item .latest-user img {
+        max-width: 100%;
+    }
 `;
 
 export const MainContent = styled.div`
@@ -70,7 +78,7 @@ export const MessageHeader = styled.div`
 
 export const MessageSender = styled.h4`
     font-size: 16px;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
     margin: 0;
     padding-inline-end: 8px;
 `;
@@ -83,16 +91,15 @@ export const MessageStatus = styled.div`
 
 export const Timestamp = styled.div`
     font-size: 11px;
-    color: #a4aaaf;
+    color: ${Colors.theme.gray};
 `;
 
-export const MessageContent = styled.p`
+export const MessageContent = styled.pre`
     font-family: 'Poppins';
     font-size: 14px;
-    line-height: 20px;
-    color: #58595a;
+    color: ${Colors.extra.davysGrey};
     max-width: 100%;
-    word-wrap: break-word;
+    white-space: pre-wrap;
 `;
 
 export const MessageAvatar = styled(Avatar)`
@@ -104,9 +111,16 @@ export const MessageReaction = styled('span')<{ isLiked: Boolean }>`
     margin-top: 0;
     padding: 3px;
     cursor: pointer;
-    background-color: ${(props) =>
-        props.isLiked ? 'lightgrey ' : 'transparent'};
-    border-radius: ${(props) => (props.isLiked ? '50%' : 'transparent')};
+    background-color: transparent;
+`;
+
+export const ReactionsListWrapper = styled('div')`
+    .str-chat__reaction-list ul {
+        list-style: none;
+        display: flex;
+        gap: 2px;
+        align-items: center;
+    }
 `;
 
 export const TotalMessageReaction = styled('span')<{ isSender: Boolean }>`
@@ -125,7 +139,7 @@ export const ListItems = styled.div`
     margin-bottom: 2%;
     padding: 10px 20px;
     max-height: 250px;
-    overflow-x: scroll;
+    overflow-y: scroll;
 `;
 
 export const Row = styled.div`
@@ -139,7 +153,23 @@ export const UserName = styled.p`
     margin-left: 12px;
     line-height: 20px;
     font-weight: bold;
-    color: #58595a;
+    color: ${Colors.extra.davysGrey};
     max-width: 100%;
     word-wrap: break-word;
+`;
+
+export const MessageOptionsWrapper = styled.div`
+    & .str-chat__message-actions-box {
+        left: 0px;
+    }
+`;
+
+export const QuotedMessageWrapper = styled.div`
+    margin-top: 14px;
+    & .quoted-message {
+        gap: 2px;
+    }
+    & div.quoted-avatar {
+        height: 32px;
+    }
 `;

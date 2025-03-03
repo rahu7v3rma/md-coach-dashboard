@@ -1,11 +1,14 @@
 import Avatar from './avatar';
+import BarChart from './barChart';
 import Button from './button';
 import Card from './card';
 import ChatManager from './chatManager';
 import CircleButton from './circleButton';
 import DashboardLayout from './dashboardWrapper';
+import Dropdown from './dropdown';
 import Header from './header';
 import Input from './input';
+import LineChart from './lineChart';
 import Loader from './loader';
 import Modal from './modal';
 import PlatformImage from './platformImage';
@@ -16,6 +19,7 @@ import Text from './text';
 
 export {
     Avatar,
+    BarChart,
     Button,
     Card,
     ChatManager,
@@ -29,5 +33,7 @@ export {
     ProfileImage,
     SearchBox,
     Sidebar,
-    Text
+    Text,
+    Dropdown,
+    LineChart
 };

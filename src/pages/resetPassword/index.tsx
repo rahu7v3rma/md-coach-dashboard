@@ -48,11 +48,11 @@ const ResetPassword: FunctionComponent<Props> = ({}: Props) => {
             })
             .catch((error) => {
                 setIsError(true);
-                if (error.code && error.message) {
-                    setErrorMessage(error.message);
-                } else {
-                    setErrorMessage('An unknown error has occurred');
-                }
+                setErrorMessage(
+                    error?.status === 400
+                        ? 'Please enter a valid email address'
+                        : 'An unknown error has occurred'
+                );
             });
     }, [email, dispatch]);
 

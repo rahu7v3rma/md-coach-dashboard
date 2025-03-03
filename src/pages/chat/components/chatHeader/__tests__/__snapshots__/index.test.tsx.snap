@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatHeader does not throw an error when onCollapseButtonClick is not provided 1`] = `
+<div
+  className="sc-aXZVg ghBzcq"
+>
+  <div
+    className="sc-gEvEer fBFxJi"
+    data-testid="chat-title"
+  >
+    Test Channel
+  </div>
+  <div
+    className="sc-eqUAAy gPNtZy"
+  >
+    <button
+      className="sc-fqkvVR bCyeDF"
+      data-testid="collapse-button"
+      onClick={[Function]}
+    >
+      <img
+        alt="collapse"
+        data-testid="collapse-icon"
+        src={Object {}}
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ChatHeader renders collapse icon in the ChatHeader component 1`] = `
+<div
+  className="sc-aXZVg ghBzcq"
+>
+  <div
+    className="sc-gEvEer fBFxJi"
+    data-testid="chat-title"
+  >
+    Test Channel
+  </div>
+  <div
+    className="sc-eqUAAy gPNtZy"
+  >
+    <button
+      className="sc-fqkvVR bCyeDF"
+      data-testid="collapse-button"
+      onClick={[Function]}
+    >
+      <img
+        alt="collapse"
+        data-testid="collapse-icon"
+        src={Object {}}
+      />
+    </button>
+  </div>
+</div>
+`;

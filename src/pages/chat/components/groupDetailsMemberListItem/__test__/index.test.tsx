@@ -3,7 +3,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import * as router from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
-import { act, create } from 'react-test-renderer';
+import { create } from 'react-test-renderer';
 
 import GroupDetailsMemberListItem from 'src/pages/chat/components/groupDetailsMemberListItem';
 import store from 'src/store';
@@ -61,31 +61,6 @@ describe('GroupDetailsMemberListItem', () => {
         expect(userName.children).toBe(user.name);
     });
 
-    it('triggers handleRemoveClick function correctly when the remove option is clicked', async () => {
-        const onRemoveMember = jest.fn();
-        const tree = create(
-            <Provider store={store}>
-                <BrowserRouter>
-                    <GroupDetailsMemberListItem
-                        user={user}
-                        onRemoveMember={onRemoveMember}
-                    />
-                </BrowserRouter>
-            </Provider>
-        );
-        const dotMenu = tree.root.findByProps({
-            alt: 'dots'
-        }).props;
-        expect(dotMenu).toBeTruthy();
-        await act(() => dotMenu.onClick({ target: { value: '' } }));
-
-        const menuItem = tree.root.findByProps({
-            id: 'menuItem'
-        }).props;
-        await act(() => menuItem.onClick());
-        expect(onRemoveMember).toHaveBeenCalled();
-    });
-
     it("computes userLastActiveTimeString correctly based on the user's last active time", async () => {
         const tree = create(
             <Provider store={store}>
@@ -115,30 +90,5 @@ describe('GroupDetailsMemberListItem', () => {
             id: 'memberStatus'
         }).props;
         expect(memberStatus.children).toBe('Online');
-    });
-
-    it('displays the remove option in the Menu component and triggers handleRemoveClick function', async () => {
-        const onRemoveMember = jest.fn();
-        const tree = create(
-            <Provider store={store}>
-                <BrowserRouter>
-                    <GroupDetailsMemberListItem
-                        user={user}
-                        onRemoveMember={onRemoveMember}
-                    />
-                </BrowserRouter>
-            </Provider>
-        );
-        const dotMenu = tree.root.findByProps({
-            alt: 'dots'
-        }).props;
-        expect(dotMenu).toBeTruthy();
-        await act(() => dotMenu.onClick({ target: { value: '' } }));
-
-        const menuItem = tree.root.findByProps({
-            id: 'menuItem'
-        }).props;
-        await act(() => menuItem.onClick());
-        expect(onRemoveMember).toHaveBeenCalled();
     });
 });

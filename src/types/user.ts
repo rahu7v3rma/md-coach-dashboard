@@ -82,6 +82,23 @@ export type UserClient = {
     weight_units: string;
     fbg: number | string;
     second_last_fbg: number | string;
+    fbg_unit: string;
+    weight_unit: string;
+};
+
+export type member = {
+    id: number;
+    first_name: string;
+    last_name: string;
+};
+
+export type UserGroup = {
+    id: number;
+    members: member[];
+    name: string;
+    group_type: string;
+    program: string;
+    attendance_sheet_url: string;
 };
 
 export type OnboardingAnswer = {

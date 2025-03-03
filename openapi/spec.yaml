@@ -717,34 +717,34 @@ paths:
                     status: 200
                     data:
                       # user 1
-                      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZTBiYzYxNGU0ZmQwMzVhNDg4NjE5Nzk5ODUzYjA3NTE0M2RlZWE1OTZjNDc3YjhkYzA3N2UzMDljMGZlNDJlOSIsImV4cCI6MTY5OTAxMDM4N30.pxnoaF6I71GAwXOlrUwGxhXFCrQlzrVgGCXSjLyJ-34
+                      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZTBiYzYxNGU0ZmQwMzVhNDg4NjE5Nzk5ODUzYjA3NTE0M2RlZWE1OTZjNDc3YjhkYzA3N2UzMDljMGZlNDJlOSIsImV4cCI6MTcwOTg3OTIzMH0.JImnI0jKiDXF5j2J_XBeuT7gTx89k0e-xLWU3XTp8mQ
                       userId: e0bc614e4fd035a488619799853b075143deea596c477b8dc077e309c0fe42e9
                       ## user 2
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZDhiZGY5YTBjYjI3YTE5M2ExMTI3ZGUyOTI0YjZlNWE5ZTRjMmQzYjNmZTQyZTkzNWUxNjBjMDExZjNkZjFmYyIsImV4cCI6MTY5OTAxMDM4OH0.UuPWhiwUUWzWVObndP1GjM4EQIo9NCW6Dq4_tqUdGq4
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZDhiZGY5YTBjYjI3YTE5M2ExMTI3ZGUyOTI0YjZlNWE5ZTRjMmQzYjNmZTQyZTkzNWUxNjBjMDExZjNkZjFmYyIsImV4cCI6MTcwOTg3OTIzMX0.qe7P8tIfP4s4WtMi87tbcZQVyVPz_Cq35HO2DYp4Jq8
                       #userId: d8bdf9a0cb27a193a1127de2924b6e5a9e4c2d3b3fe42e935e160c011f3df1fc
                       ## user 3
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNWI2NTcxMmQ1NjVjMTU1MTM0MDk5ODEwMmQ0MThjZWNjYjM1ZGI4ZGJmYjQ1ZjkwNDFjNGNhZTQ4M2Q4NzE3YiIsImV4cCI6MTY5OTAxMDM4OX0.28PwDCuXRWjMjdbrPBI_L6_D9ZX3nrd2qQgvlLR21Zg
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNWI2NTcxMmQ1NjVjMTU1MTM0MDk5ODEwMmQ0MThjZWNjYjM1ZGI4ZGJmYjQ1ZjkwNDFjNGNhZTQ4M2Q4NzE3YiIsImV4cCI6MTcwOTg3OTIzMn0.Nsoe7-Qv106bzbyk3Mdy-CUk8Q-qa0r2ciJO5MdrwwU
                       #userId: 5b65712d565c1551340998102d418ceccb35db8dbfb45f9041c4cae483d8717b
                       ## user 4
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMDMzYzMzOWE3OTc1NTQyNzg1YmU3NDIzYTViMzJmYTgwNDc4MTM2ODk3MjYyMTQxNDNjZGQ3OTM5NzQ3NzA5YyIsImV4cCI6MTY5OTAxMDM5MH0.WiRFrYD1ebouhcZBImdnMwjnU9eO87yLLU-pqg7B4yg
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMDMzYzMzOWE3OTc1NTQyNzg1YmU3NDIzYTViMzJmYTgwNDc4MTM2ODk3MjYyMTQxNDNjZGQ3OTM5NzQ3NzA5YyIsImV4cCI6MTcwOTg3OTIzMn0.uX28Kw6X2RcLsgqYMfc9qbW2VInhD78EuMerAjeXCw4
                       #userId: 033c339a7975542785be7423a5b32fa8047813689726214143cdd7939747709c
                       ## user 5
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzgxZDQwZGJlZWQzNjlmMTQ3NjA4NmNmODgyZGQzNmJmMWMzZGMzNWUwNzAwNmYwYmVjNTg4Yjk4MzA1NTQ4NyIsImV4cCI6MTY5OTAxMDM5MH0.U8BKb3k7UuAtPpuVXD-Gzz7MglUt0I93ctTem6qlWik
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzgxZDQwZGJlZWQzNjlmMTQ3NjA4NmNmODgyZGQzNmJmMWMzZGMzNWUwNzAwNmYwYmVjNTg4Yjk4MzA1NTQ4NyIsImV4cCI6MTcwOTg3OTIzM30.axcZ1WexyKv6wPB5PwpIXy2Y-k8k1ufnlUNcQpC67FE
                       #userId: c81d40dbeed369f1476086cf882dd36bf1c3dc35e07006f0bec588b983055487
                       ## user 6
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWUyNTliN2Y2YjRjNzQxOTM3YTk2YTk2MTdiM2U2Yjg0ZTE2NmZmNmU5MjVlNDE0ZTdiNzI5MzZmNWEyYTUxZiIsImV4cCI6MTY5OTAxMDM5MX0.Sy4qwOn3Q5k65QZwCOm5kgOVfT-EUfS6chv92Xo-yIg
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOWUyNTliN2Y2YjRjNzQxOTM3YTk2YTk2MTdiM2U2Yjg0ZTE2NmZmNmU5MjVlNDE0ZTdiNzI5MzZmNWEyYTUxZiIsImV4cCI6MTcwOTg3OTIzM30.MQOA4dTh5jOanHOx-bAXktk1wDb6HgK2dJntZMnDWyQ
                       #userId: 9e259b7f6b4c741937a96a9617b3e6b84e166ff6e925e414e7b72936f5a2a51f
                       ## user 7
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTA0OGYwM2RiNWQ0NWY2NTRiOTU1ZWFlMjBkODRiNzI2NzM2ODBmYjEzYjMxOGU3ZGEyMmU4ZGNlNThkZjIxYyIsImV4cCI6MTY5OTAxMDM5Mn0.VULm1Uxua1Cx-WrD9EVduqPyMtgNX16NQ__ud1k-e7I
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTA0OGYwM2RiNWQ0NWY2NTRiOTU1ZWFlMjBkODRiNzI2NzM2ODBmYjEzYjMxOGU3ZGEyMmU4ZGNlNThkZjIxYyIsImV4cCI6MTcwOTg3OTIzNH0.Hq7lIiN0ustiXFUAnvLq6W5L-UaCYMTS5Hwulw0loMU
                       #userId: 1048f03db5d45f654b955eae20d84b72673680fb13b318e7da22e8dce58df21c
                       ## user 8
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOGYwNzAzZDQwNmZkYjBlYTgwMTFkNWRlMzQyYzNhY2E2MjIxNDc1OGE4YTJiNWI4YTRlOWYxYzhjNmM0MjQ2MiIsImV4cCI6MTY5OTAxMDM5M30.Ttv2wtJoqERko2ODcN_UGDd8RnIj8PDDWbnbNcWE7Vw
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiOGYwNzAzZDQwNmZkYjBlYTgwMTFkNWRlMzQyYzNhY2E2MjIxNDc1OGE4YTJiNWI4YTRlOWYxYzhjNmM0MjQ2MiIsImV4cCI6MTcwOTg3OTIzNX0.Axk7aJWJBnrkjxlF7jd2vL8hLeFEVLGWIeD5b916tHo
                       #userId: 8f0703d406fdb0ea8011d5de342c3aca62214758a8a2b5b8a4e9f1c8c6c42462
                       ## user 9
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTgyYjMyMzU5NTU4ZWIwOTI1MTFiNzE2Njg2NzUwM2RkZDgzZmJlNWI0MmYyNTQ1ZTE5MDMwMTZlNzIxMzkzZCIsImV4cCI6MTY5OTAxMDM5NH0.Wf_SO3_U4iV9oYgF0fPFT5yt9k1QV6lnXjEpDOt5AIA
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTgyYjMyMzU5NTU4ZWIwOTI1MTFiNzE2Njg2NzUwM2RkZDgzZmJlNWI0MmYyNTQ1ZTE5MDMwMTZlNzIxMzkzZCIsImV4cCI6MTcwOTg3OTIzNX0.OZ52He15wPx6ZdYEYJOUEivzo5OqWnsD0dghF9_n9LE
                       #userId: 182b32359558eb092511b7166867503ddd83fbe5b42f2545e1903016e721393d
                       ## user 10
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZmU1ZjBmYzY0MGNiYmMxMTM0MDZmMDQyZDA4Y2M2MGJhNzg0Yzc3NWY3YzMyOTk5ODU2NjUzMjNjNWZiY2RjNCIsImV4cCI6MTY5OTAxMDM5NX0.1VC7D6K7qFNZBgTqgZHTXFGTVhqH-i9spKspyk8lUJ0
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZmU1ZjBmYzY0MGNiYmMxMTM0MDZmMDQyZDA4Y2M2MGJhNzg0Yzc3NWY3YzMyOTk5ODU2NjUzMjNjNWZiY2RjNCIsImV4cCI6MTcwOTg3OTIzNn0.ct3im-ipHZaL3QjhtbOxYdApbuoDet9d-h2GZQai0Qc
                       #userId: fe5f0fc640cbbc113406f042d08cc60ba784c775f7c3299985665323c5fbcdc4
                       apiKey: 9h8revtjvfgt
                       firebasePushProviderName: fake-provider
@@ -1030,7 +1030,8 @@ paths:
                           second_last_fasting: 117
                           last_weight: 142
                           second_last_weight: 142
-                          weight_units: "kg"
+                          weight_unit: "kg"
+                          fbg_unit: "mmol"
                           last_week_avg_fbg: 142
                           activity_type: "Running"
                           duration: 35
@@ -1048,7 +1049,8 @@ paths:
                           second_last_fasting: 117
                           last_weight: 194
                           second_last_weight: 142
-                          weight_units: "kg"
+                          weight_unit: "kg"
+                          fbg_unit: "mmol"
                           last_week_avg_fbg: 142
                           activity_type: "Walking"
                           duration: 35
@@ -1436,3 +1438,623 @@ paths:
       security:
         - auth_key: [ ]
       description: Read User Notification
+  /chat/groups:
+    get:
+      summary: Fetch User Groups
+      tags: [ ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: Groups fetched successfully.
+                    status: 200
+                    data:
+                      - id: 1
+                        name: "annoucement"
+                        group_type: ""
+                        program: "WL"
+                        attendance_sheet_url: "https://www.google.com/"
+                        members:
+                          - id: 8
+                            first_name: "Adams"
+                            last_name: "anderson"
+                          - id: 9
+                            first_name: "Jack"
+                            last_name: "baker"
+                      - id: 2
+                        name: "Test group"
+                        group_type: "Weight Loss"
+                        program: "MD"
+                        attendance_sheet_url: "https://fast.com/"
+                        members:
+                          - id: 12
+                            first_name: "Brooks"
+                            last_name: "green"
+                          - id: 13
+                            first_name: "Chapman"
+                            last_name: "baker"
+                      - id: 3
+                        name: "annoucement"
+                        group_type: ""
+                        program: "WL"
+                        attendance_sheet_url: "https://www.google.com/"
+                        members:
+                          - id: 8
+                            first_name: "Adams"
+                            last_name: "anderson"
+                          - id: 9
+                            first_name: "Jack"
+                            last_name: "baker"
+                      - id: 4
+                        name: "Test group"
+                        group_type: "Non-Insulin-Dependent"
+                        program: "MD"
+                        attendance_sheet_url: "https://fast.com/"
+                        members:
+                          - id: 12
+                            first_name: "Brooks"
+                            last_name: "green"
+                          - id: 13
+                            first_name: "Chapman"
+                            last_name: "baker"
+                      - id: 5
+                        name: "Test group"
+                        group_type: "Insulin-Dependent"
+                        program: "MD"
+                        attendance_sheet_url: "https://fast.com/"
+                        members:
+                          - id: 12
+                            first_name: "Brooks"
+                            last_name: "green"
+                          - id: 13
+                            first_name: "Chapman"
+                            last_name: "baker"
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: unauthorized
+                    message: Unauthorized.
+                    status: 401
+                    data: { }
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: not_found
+                    message: Not found.
+                    status: 404
+                    data: { }
+      operationId: Get Groups
+      security:
+        - auth_key: [ ]
+      description: Fetched Groups
+  /chat/groups/{id}:
+    get:
+      summary: Fetch Group detail
+      tags: [ ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: Group details fetched successfully
+                    status: 200
+                    data:
+                      id: 1
+                      name: "annoucement"
+                      users:
+                        - id: 8
+                          first_name: "Adams"
+                          last_name: "anderson"
+                        - id: 9
+                          first_name: "Jack"
+                          last_name: "baker"
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: unauthorized
+                    message: Unauthorized.
+                    status: 401
+                    data: { }
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: not_found
+                    message: Not found.
+                    status: 404
+                    data: { }
+      operationId: Get Groups
+      security:
+        - auth_key: [ ]
+      description: Fetched Groups
+  /user/{id}/notes:
+    get:
+      summary: get user notes
+      tags: [ ]
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: Notes Customer retrieved successfully
+                    status: 200
+                    data:
+                      count: 4
+                      has_next: false
+                      has_previous: false
+                      next_page_number: null
+                      list:
+                        - id: 4
+                          content: "Lesson 2 Completed"
+                          created_at: "2024-02-09T12:12:12Z"
+                        - id: 3
+                          content: "Please complete profile"
+                          created_at: "2024-02-08T12:12:12Z"
+                        - id: 2
+                          content: "pending missing logs"
+                          created_at: "2024-01-10T12:12:12Z"
+                        - id: 1
+                          content: "start"
+                          created_at: "2024-01-8T12:12:12Z"
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: unauthorized
+                    message: Unauthorized.
+                    status: 401
+                    data: { }
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: not_found
+                    message: Not found.
+                    status: 404
+                    data: { }
+      operationId: Get User Notes
+      security:
+        - auth_key: [ ]
+      description: Get User Notess
+  /meeting_notes/:
+    post:
+      summary: create meeting note
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                content:
+                  type: string
+                customer_id:
+                  type: number
+              required:
+                - content
+                - customer_id
+      responses:
+        '200':
+          description: Meeting note saved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                      coach:
+                        type: number
+                      customer:
+                        type: number
+                      content:
+                        type: string
+                      created_at:
+                        type: string
+                      updated_at:
+                        type: string
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: Meeting note saved successfully.
+                    status: 200
+                    data:
+                      id: 33
+                      coach: 2
+                      customer: 3
+                      content: hello world
+                      created_at: 2024-02-29T10:51:38.984740Z,
+                      updated_at: 2024-02-29T10:51:38.984782Z
+        '400':
+          description: Request is invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: request_invalid
+                    message: Request is invalid.
+                    status: 400
+                    data: { }
+        '401':
+          description: Bad credentials
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: bad_credentials
+                    message: Bad credentials.
+                    status: 401
+                    data: { }
+      description: create meeting note
+      security:
+        - auth_key: [ ]
+  /meeting_notes/{id}:
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    delete:
+      summary: Delete user meeting note
+      operationId: delete-user-note
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: Note deleted successfully.
+                    status: 200
+                    data: { }
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: unauthorized
+                    message: Unauthorized.
+                    status: 401
+                    data: { }
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: not_found
+                    message: Not found.
+                    status: 404
+                    data: { }
+      description: Delete User note
+      security:
+        - auth_key: [ ]
+    patch:
+      summary: Update meeting note
+      tags: [ ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                content:
+                  type: string
+                customer_id:
+                  type: number
+              required:
+                - content
+                - customer_id
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: Note updated successfully.
+                    status: 200
+                    data:
+                      id: 32
+                      coach: 2
+                      customer: 4
+                      content: Hello user
+                      created_at: 2024-02-29T10:35:15.915812Z
+                      updated_at: 2024-03-01T10:16:53.608473Z
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: unauthorized
+                    message: Unauthorized.
+                    status: 401
+                    data: { }
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: not_found
+                    message: Not found.
+                    status: 404
+                    data: { }
+      operationId: Update meeting note
+      security:
+        - auth_key: [ ]
+      description: Update meeting note
+  /user/{id}/analytics:
+    get:
+      summary: user analytics
+      tags: [ ]
+      responses:
+        '200':
+          description: User Analytics retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  status:
+                    type: number
+                  data:
+                    type: object
+              examples:
+                example:
+                  value:
+                    success: true
+                    message: User Analytics retrieved successfully
+                    status: 200
+                    data:
+                      UserFast:
+                        "2024-01-01":
+                          - duration_minutes: 10
+                        "2024-01-02":
+                          - duration_minutes: 20
+                        "2024-01-03":
+                          - duration_minutes: 35
+                        "2024-01-04":
+                          - duration_minutes: 23
+                        "2024-01-05":
+                          - duration_minutes: 12
+                        "2024-01-06":
+                          - duration_minutes: 34
+                        "2024-01-07":
+                          - duration_minutes: 50
+                      UserGlucose:
+                        "2024-01-01":
+                          - unit: "mmol"
+                            amount: 12.0
+                            measurement_type: "Postmeal"
+                        "2024-01-02":
+                          - unit: "mmol"
+                            amount: 4
+                            measurement_type: "Postmeal"
+                        "2024-01-03": null
+                        "2024-01-04":
+                          - unit: "mmol"
+                            amount: 30
+                            measurement_type: "Premeal"
+                        "2024-01-05": null
+                        "2024-01-06": null
+                        "2024-01-07":
+                          - unit: "mmol"
+                            amount: 2
+                            measurement_type: "Postmeal"
+                      UserWeight:
+                        "2024-01-01":
+                          - unit: "mmol"
+                            amount: 12.0
+                        "2024-01-02":
+                          - unit: "mmol"
+                            amount: 4
+                        "2024-01-03": null
+                        "2024-01-04":
+                          - unit: "mmol"
+                            amount: 30
+                        "2024-01-05": null
+                        "2024-01-06": null
+                        "2024-01-07":
+                          - unit: "mmol"
+                            amount: 2
+                      UserInsulin:
+                        "2024-01-01":
+                          - unit: 4
+                            injection_type: "Basal insulin"
+                        "2024-01-02":
+                          - unit: 8
+                            injection_type: "Basal insulin"
+                        "2024-01-03": null
+                        "2024-01-04":
+                          - unit: 12
+                            injection_type: "Basal insulin"
+                        "2024-01-05": null
+                        "2024-01-06": null
+                        "2024-01-07":
+                          - unit: 34
+                            injection_type: "Basal insulin"
+        '400':
+          description: Request is invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: request_invalid
+                    message: Request is invalid.
+                    status: 400
+                    data: { }
+        '401':
+          description: Bad credentials
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                example:
+                  value:
+                    success: false
+                    code: bad_credentials
+                    message: Bad credentials.
+                    status: 401
+                    data: { }
+      description: User analytics report
+      security:
+        - auth_key: [ ]

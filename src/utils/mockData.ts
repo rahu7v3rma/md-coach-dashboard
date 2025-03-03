@@ -1,5 +1,7 @@
 import moment from 'moment';
 
+import { Colors } from './colors';
+
 export const chatUserList = [
     {
         id: 'e455062a4ec9ccef9a3d651fb9b2c7b25f983dbcc9c90be976b0996bcbd3cc6c',
@@ -372,7 +374,9 @@ export const userClient = [
         hydration: 3,
         hydration_unit: 'cups',
         fbg: 120,
-        second_last_fbg: 130
+        second_last_fbg: 130,
+        fbg_unit: 'mmol',
+        weight_unit: 'kg'
     },
     {
         id: 2,
@@ -392,7 +396,9 @@ export const userClient = [
         hydration: 2,
         hydration_unit: 'cups',
         fbg: 12,
-        second_last_fbg: 8
+        second_last_fbg: 8,
+        fbg_unit: 'mmol',
+        weight_unit: 'kg'
     }
 ];
 
@@ -412,4 +418,52 @@ export const currentMembers = [
     'a5de9604d556d6f190a23e5a7dffb7a49c3ada560258fdc3e48c0c98c0533ea8',
     'ab2e30bf75636a9c97e05099d9ccc9b623c17a44f629e7ce7206dba683028db1',
     'e0bc614e4fd035a488619799853b075143deea596c477b8dc077e309c0fe42e9'
+];
+
+const clientDetailsAnalyticsCardsChartData = [
+    { x: '01/02/2024', y: 100 },
+    { x: '02/02/2024', y: 200 },
+    { x: '03/02/2024', y: 300 },
+    { x: '04/02/2024', y: 400 },
+    { x: '05/02/2024', y: 500 }
+];
+export const clientDetailsAnalyticsCards = [
+    {
+        title: 'Glucose',
+        color: Colors.extra.red,
+        chart: {
+            type: 'line' as 'line',
+            data: [
+                { x: '01/02/2024', y: 100 },
+                { x: '02/02/2024', y: 200 },
+                { x: '03/02/2024', y: null },
+                { x: '04/02/2024', y: 300 },
+                { x: '05/02/2024', y: 400 }
+            ]
+        }
+    },
+    {
+        title: 'Weight (kg)',
+        color: Colors.extra.slateBlue,
+        chart: {
+            type: 'line' as 'line',
+            data: clientDetailsAnalyticsCardsChartData
+        }
+    },
+    {
+        title: 'Fasting',
+        color: Colors.extra.orange,
+        chart: {
+            type: 'bar' as 'bar',
+            data: clientDetailsAnalyticsCardsChartData
+        }
+    },
+    {
+        title: 'Insulin',
+        color: Colors.extra.green,
+        chart: {
+            type: 'bar' as 'bar',
+            data: clientDetailsAnalyticsCardsChartData
+        }
+    }
 ];

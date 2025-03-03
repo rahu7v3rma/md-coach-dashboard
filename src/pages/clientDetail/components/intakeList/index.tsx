@@ -19,7 +19,7 @@ const IntakeList: FC<IntakeListProps> = (props: IntakeListProps) => {
                 return (
                     <Card
                         key={`intake-${i}`}
-                        borderColor={Colors.extra.border_color}
+                        borderColor={Colors.theme.lightSkyBlue}
                         borderRadius="16px"
                         borderStyle="solid"
                         width={width ? `${width}%` : 'auto'}
@@ -27,15 +27,15 @@ const IntakeList: FC<IntakeListProps> = (props: IntakeListProps) => {
                         justifyContent="center"
                         alignItems="center"
                         backgroundColor={
-                            i % 2 ? Colors.extra.off_white : Colors.extra.white
+                            i % 2 ? Colors.extra.offWhite : Colors.extra.white
                         }
                         marginTop={i === 0 ? 0 : -2}
                     >
                         <Text
                             width="50%"
                             textAlign="center"
-                            fontSize={Size.XXSmall}
-                            color={Colors.extra.black_text}
+                            fontSize={Size.X2Small}
+                            color={Colors.extra.blackText}
                             fontWeight="600"
                         >
                             {l.question}:
@@ -43,8 +43,8 @@ const IntakeList: FC<IntakeListProps> = (props: IntakeListProps) => {
                         <Text
                             width="50%"
                             textAlign="left"
-                            fontSize={Size.XXSmall}
-                            color={Colors.extra.black_text}
+                            fontSize={Size.X2Small}
+                            color={Colors.extra.blackText}
                             fontWeight="600"
                         >
                             {l.answer}

@@ -8,8 +8,9 @@ import {
 
 import ChatListItem from '../chatListItem';
 import SearchBar from '../searchBar';
+import { Loader } from 'src/shared';
 
-import { ListContainer, Wrapper } from './styles';
+import { ListContainer, LoaderContainer, Wrapper } from './styles';
 
 type Props = {
     createGroupClick?: () => void;
@@ -27,10 +28,11 @@ const ChatList: FunctionComponent<Props> = ({}: Props) => {
             members: { $in: [client.userID!] }
         };
 
-        if (searchTerm) {
+        const trimmedTerm = searchTerm.trim();
+        if (trimmedTerm) {
             filters['$or'] = [
-                { name: { $autocomplete: searchTerm } },
-                { 'member.user.name': { $autocomplete: searchTerm } }
+                { name: { $autocomplete: trimmedTerm } },
+                { 'member.user.name': { $autocomplete: trimmedTerm } }
             ];
         }
 
@@ -44,6 +46,13 @@ const ChatList: FunctionComponent<Props> = ({}: Props) => {
             <ListContainer>
                 <ChannelList
                     filters={channelFilters}
+                    LoadingIndicator={() => {
+                        return (
+                            <LoaderContainer>
+                                <Loader />
+                            </LoaderContainer>
+                        );
+                    }}
                     sort={{ last_message_at: -1 }}
                     options={{ state: true, presence: true, limit: 10 }}
                     Preview={({

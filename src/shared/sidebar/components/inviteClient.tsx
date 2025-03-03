@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import FoxInvite from '../../../assets/fox-invite.png';
 import { Button } from '../../../shared';
+import { Size } from 'src/shared/text';
 import { Colors } from 'src/utils/colors';
 
 const InviteContainer = styled.div`
@@ -31,12 +32,12 @@ const FoxContainer = styled.img`
 const Subtitle = styled.span`
     font: 500 11px/16px 'Poppins', sans-serif;
     text-align: center;
-    color: ${Colors.extra.grayLight};
+    color: ${Colors.theme.gray};
     margin: 8px 0 16px 0;
 `;
 
 const Title = styled.span`
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
     font: 600 14px/20px 'Poppins', sans-serif;
 `;
 
@@ -56,7 +57,7 @@ const InviteClient: FunctionComponent<Props> = ({}: Props) => {
                     backgroundColor={Colors.theme.primary}
                     color={Colors.extra.white}
                     borderRadius="12px"
-                    fontSize={12}
+                    fontSize={Size.X3Small}
                 >
                     Invite
                 </Button>

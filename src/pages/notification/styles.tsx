@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
+import { Colors } from 'src/utils/colors';
+
 export const Wrapper = styled.div`
     width: 100%;
     height: 100vh;
     display: flex;
-    background: #f5f8fb;
+    background: ${Colors.extra.white1};
 `;
 
 export const MainContent = styled.div`
@@ -19,7 +21,7 @@ export const Title = styled.p`
     font-weight: 700;
     font-size: 32px;
     line-height: 36px;
-    color: #271a51;
+    color: ${Colors.extra.blackText};
 `;
 
 export const Container = styled.div`
@@ -58,7 +60,7 @@ export const PlaceholderFox = styled.img`
 `;
 
 export const PlaceholderText = styled.span`
-    color: #6e51d0;
+    color: ${Colors.extra.slateBlue};
     font-weight: 600;
     font-size: 20px;
     text-align: center;
@@ -93,18 +95,18 @@ export const DisplayName = styled.div`
 `;
 
 export const NameTitle = styled.span`
-    color: #271a51;
+    color: ${Colors.extra.blackText};
     font-weight: 600;
     font-size: 13px;
 `;
 
 export const Subtitle = styled.span`
-    color: #a4aaaf;
+    color: ${Colors.theme.gray};
     font-size: 11px;
 `;
 
 export const TimeText = styled.span`
-    color: #a4aaaf;
+    color: ${Colors.theme.gray};
     font-size: 11px;
     margin-left: auto;
 `;

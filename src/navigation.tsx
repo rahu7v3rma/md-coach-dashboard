@@ -44,6 +44,10 @@ export const appRouter = createBrowserRouter([
             {
                 path: '/client/:id',
                 element: <ClientDetail />
+            },
+            {
+                path: '/group/:group_id/member/:id',
+                element: <ClientDetail />
             }
         ]
     }

@@ -18,7 +18,7 @@ const Container = styled.div<{ selected: boolean }>`
 const PageIconDiv = styled.div`
     width: 24px;
     height: 24px;
-    margin: 0 12px 0 16px;
+    margin: 0 12px 0 12px;
     border: 1px solid transparent;
     display: flex;
     justify-content: center;
@@ -27,8 +27,7 @@ const PageIconDiv = styled.div`
 
 const PageName = styled.p<{ selected: boolean }>`
     font: 14px/20px 'Poppins', sans-serif;
-    color: ${(a) =>
-        a.selected ? Colors.theme.primary : Colors.extra.grayLight};
+    color: ${(a) => (a.selected ? Colors.theme.primary : Colors.theme.gray)};
     font-weight: ${(a) => (a.selected ? 600 : 500)};
     border: 1px solid transparent;
 `;

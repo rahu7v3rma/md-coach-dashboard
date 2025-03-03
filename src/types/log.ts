@@ -16,3 +16,8 @@ export type logBooks = {
         next_page_number: number | null;
     };
 };
+
+export type Log = {
+    icon: string;
+    title: string;
+};

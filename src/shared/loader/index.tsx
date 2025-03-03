@@ -1,13 +1,16 @@
 import { FunctionComponent } from 'react';
 import styled from 'styled-components';
 
+import { Colors } from 'src/utils/colors';
+
 export const StyledLoader = styled.svg`
     animation: rotate 2s linear infinite;
     width: 25px;
     height: 25px;
+    margin: 30px;
 
     & .path {
-        stroke: #5652bf;
+        stroke: ${Colors.theme.primary};
         stroke-linecap: round;
         animation: dash 1.5s ease-in-out infinite;
     }

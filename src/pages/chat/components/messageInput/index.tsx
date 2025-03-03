@@ -2,6 +2,7 @@ import { FunctionComponent } from 'react';
 import { FileUploadButton, ImageDropzone } from 'react-file-utils';
 import {
     ChatAutoComplete,
+    QuotedMessagePreview,
     UploadsPreview,
     useChannelStateContext,
     useMessageInputContext
@@ -11,7 +12,14 @@ import AttachIcon from 'src/assets/attach-icon.svg';
 import SendIcon from 'src/assets/send-icon.svg';
 import CircleButton from 'src/shared/circleButton';
 
-import { ChatTools, Icon, InputWrapper } from './styles';
+import {
+    ChatTools,
+    ChatToolsWrapper,
+    Icon,
+    InputWrapper,
+    InputWrapperContainer,
+    QuotedContainer
+} from './styles';
 
 type Props = {};
 
@@ -19,7 +27,8 @@ const MessageInput: FunctionComponent<Props> = ({}: Props) => {
     const { uploadNewFiles, maxFilesLeft, handleSubmit } =
         useMessageInputContext();
 
-    const { acceptedFiles, multipleUploads } = useChannelStateContext();
+    const { acceptedFiles, multipleUploads, quotedMessage } =
+        useChannelStateContext();
 
     return (
         <ImageDropzone
@@ -27,21 +36,33 @@ const MessageInput: FunctionComponent<Props> = ({}: Props) => {
             accept={acceptedFiles}
             multiple={multipleUploads}
         >
-            <ChatTools>
-                <FileUploadButton
-                    accepts={acceptedFiles}
-                    disabled={maxFilesLeft === 0}
-                    handleFiles={uploadNewFiles}
-                    multiple={multipleUploads}
-                >
-                    <Icon src={AttachIcon} alt="Attach" />
-                </FileUploadButton>
-                <InputWrapper>
-                    <UploadsPreview />
-                    <ChatAutoComplete placeholder="Enter your message" />
-                    <CircleButton image={SendIcon} onClick={handleSubmit} />
-                </InputWrapper>
-            </ChatTools>
+            <ChatToolsWrapper>
+                {quotedMessage && (
+                    <QuotedContainer>
+                        <QuotedMessagePreview quotedMessage={quotedMessage} />
+                    </QuotedContainer>
+                )}
+                <ChatTools>
+                    <FileUploadButton
+                        accepts={acceptedFiles}
+                        disabled={maxFilesLeft === 0}
+                        handleFiles={uploadNewFiles}
+                        multiple={multipleUploads}
+                    >
+                        <Icon src={AttachIcon} alt="Attach" />
+                    </FileUploadButton>
+                    <InputWrapperContainer>
+                        <InputWrapper>
+                            <UploadsPreview />
+                            <ChatAutoComplete placeholder="Enter your message" />
+                            <CircleButton
+                                image={SendIcon}
+                                onClick={handleSubmit}
+                            />
+                        </InputWrapper>
+                    </InputWrapperContainer>
+                </ChatTools>
+            </ChatToolsWrapper>
         </ImageDropzone>
     );
 };

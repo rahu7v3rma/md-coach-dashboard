@@ -1,20 +1,21 @@
-import {
-    FunctionComponent,
-    useCallback,
-    useMemo,
-    useRef,
-    useState
-} from 'react';
+import { FunctionComponent, useMemo, useRef, useState } from 'react';
+import { ReactionResponse } from 'stream-chat';
 import {
     Attachment,
+    CommonEmoji,
+    EmojiSetDef,
     MessageOptions,
     MessageTimestamp,
+    MinimalEmoji,
     ReactionSelector,
+    SimpleReactionsList,
     useActionHandler,
     useChatContext,
     useMessageContext,
     useUserRole
 } from 'stream-chat-react';
+import { QuotedMessage } from 'stream-chat-react/dist/components/Message/QuotedMessage';
+import { DefaultStreamChatGenerics } from 'stream-chat-react/dist/types/types';
 
 import ReadIcon from 'src/assets/read-icon.svg';
 import SentIcon from 'src/assets/sent-icon.svg';
@@ -28,29 +29,94 @@ import {
     MessageAvatar,
     MessageContent,
     MessageHeader,
-    MessageReaction,
+    MessageOptionsWrapper,
     MessageSender,
     MessageStatus,
+    QuotedMessageWrapper,
+    ReactionsListWrapper,
     Row,
     Timestamp,
-    TotalMessageReaction,
     UserName
 } from './styles';
 
 type Props = {};
+const commonEmoji: CommonEmoji = {
+    custom: true,
+    emoticons: [],
+    short_names: []
+};
 
+const emojiSetDef: EmojiSetDef = {
+    imageUrl: '',
+    sheetColumns: 2,
+    sheetRows: 3,
+    sheetSize: 64,
+    spriteUrl: 'https://getstream.imgix.net/images/emoji-sprite.png'
+};
+
+const customReactions: MinimalEmoji[] = [
+    {
+        colons: ':+1:',
+        id: '+1',
+        name: 'Thumbs Up',
+        sheet_x: 0,
+        sheet_y: 0,
+        ...commonEmoji,
+        ...emojiSetDef
+    },
+    {
+        colons: ':heart:',
+        id: 'heart',
+        name: 'Heart',
+        sheet_x: 1,
+        sheet_y: 2,
+        ...commonEmoji,
+        ...emojiSetDef
+    },
+    {
+        colons: ':muscle:',
+        id: 'muscle',
+        name: 'Muscle',
+        sheet_x: 1,
+        sheet_y: 0,
+        ...commonEmoji,
+        ...emojiSetDef
+    },
+    {
+        colons: ':smile:',
+        id: 'slightly_smiling_face',
+        name: 'Smile Face',
+        sheet_x: 0,
+        sheet_y: 2,
+        ...commonEmoji,
+        ...emojiSetDef
+    },
+    {
+        colons: ':cry:',
+        id: 'cry',
+        name: 'cry',
+        sheet_x: 0,
+        sheet_y: 1,
+        ...commonEmoji,
+        ...emojiSetDef
+    },
+    {
+        colons: ':raised_hands:',
+        id: 'raised_hands',
+        name: 'raised_hands',
+        sheet_x: 1,
+        sheet_y: 0,
+        ...commonEmoji,
+        ...emojiSetDef
+    }
+];
 const Message: FunctionComponent<Props> = () => {
-    const { client, channel } = useChatContext();
-    const {
-        message,
-        isReactionEnabled,
-        reactionSelectorRef,
-        readBy,
-        showDetailedReactions
-    } = useMessageContext();
+    const { client } = useChatContext();
+    const { message, reactionSelectorRef, readBy, showDetailedReactions } =
+        useMessageContext();
     const { isMyMessage } = useUserRole(message);
 
-    const [isDisplayUsers, setDisplayUsers] = useState(false);
+    const [clickedReactionId, setClickedReactionId] = useState<string>('');
     const messageWrapperRef = useRef(null);
     const readStatusIcon = useMemo(() => {
         if (
@@ -78,35 +144,57 @@ const Message: FunctionComponent<Props> = () => {
         }
     }, [message, isMyMessage, readBy, client.user?.id]);
 
-    const didLike = useMemo(() => {
-        return message?.own_reactions?.filter(
-            (reaction) => reaction.type === 'like'
+    const reactedUsersList: {
+        image?: string;
+        name?: string;
+        reactionId?: string;
+    }[] = useMemo(() => {
+        return (message?.latest_reactions || []).map(
+            (reaction: ReactionResponse) => ({
+                image: reaction?.user?.image as string,
+                name: reaction?.user?.name,
+                reactionId: reaction?.type
+            })
         );
-    }, [message?.own_reactions]);
-
-    const likeReactionsUsersList = useMemo(() => {
-        return message?.latest_reactions
-            ?.filter((item) => item.type === 'like')
-            ?.map((reaction: any) => ({
-                image: reaction?.user?.image,
-                name: reaction?.user?.name
-            }));
     }, [message?.latest_reactions]);
-
-    const onSendLikeReaction = useCallback(async () => {
-        if (Number(didLike?.length) < 1) {
-            // @ts-ignore
-            await channel.sendReaction(message?.id, {
-                type: 'like'
-            });
-        } else {
-            // @ts-ignore
-            await channel.deleteReaction(message?.id, 'like');
-        }
-    }, [channel, didLike?.length, message?.id]);
-
     const handleAction = useActionHandler(message);
-
+    const [reactionsObject, reactionsCounts] = useMemo<
+        [
+            {
+                [key: string]: ReactionResponse<DefaultStreamChatGenerics>;
+            },
+            { [key: string]: number }
+        ]
+    >(() => {
+        const _reactionsCounts: { [key: string]: number } = {};
+        const _reactionsObject: {
+            [key: string]: ReactionResponse<DefaultStreamChatGenerics>;
+        } = {};
+        for (const latestReaction of message.latest_reactions || []) {
+            if (latestReaction.type && latestReaction) {
+                if (!_reactionsCounts[latestReaction.type]) {
+                    _reactionsCounts[latestReaction.type] = 0;
+                }
+                _reactionsObject[latestReaction.type] = latestReaction;
+                _reactionsCounts[latestReaction.type]++;
+            }
+        }
+        return [_reactionsObject, _reactionsCounts];
+    }, [message]);
+    const MemoizedAttachments = useMemo(() => {
+        return () => {
+            if (!message.attachments) {
+                return null;
+            }
+            return (
+                <Attachment
+                    attachments={message.attachments}
+                    actionHandler={handleAction}
+                />
+            );
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [message.id]);
     return (
         <>
             <ChatMessageWrapper isSender={isMyMessage}>
@@ -118,12 +206,11 @@ const Message: FunctionComponent<Props> = () => {
                         online={message.user?.online}
                     />
                     <MainContent>
-                        <MessageOptions
-                            displayLeft={false}
-                            messageWrapperRef={messageWrapperRef}
-                        />
-                        {showDetailedReactions && isReactionEnabled && (
-                            <ReactionSelector ref={reactionSelectorRef} />
+                        {showDetailedReactions && (
+                            <ReactionSelector
+                                reactionOptions={customReactions}
+                                ref={reactionSelectorRef}
+                            />
                         )}
                         <MessageHeader>
                             <MessageSender>{message.user?.name}</MessageSender>
@@ -134,46 +221,72 @@ const Message: FunctionComponent<Props> = () => {
                                 {readStatusIcon}
                             </MessageStatus>
                         </MessageHeader>
+                        <QuotedMessageWrapper>
+                            <QuotedMessage />
+                        </QuotedMessageWrapper>
+                        <MemoizedAttachments />
                         <MessageContent>{message?.text}</MessageContent>
-                        {message?.reaction_counts?.like && (
-                            <TotalMessageReaction
-                                onClick={() => setDisplayUsers(true)}
-                                isSender={isMyMessage}
-                            >
-                                {message?.reaction_counts?.like} 👍
-                            </TotalMessageReaction>
-                        )}
-                        {message.attachments && (
-                            <Attachment
-                                attachments={message.attachments}
-                                actionHandler={handleAction}
-                            />
+                        {message?.latest_reactions && (
+                            <ReactionsListWrapper>
+                                {customReactions.map(
+                                    (reaction: MinimalEmoji) =>
+                                        reactionsObject[reaction.id] &&
+                                        reactionsObject[reaction.id].score && (
+                                            <SimpleReactionsList
+                                                key={reaction.id}
+                                                reaction_counts={{
+                                                    [reaction.id]:
+                                                        reactionsCounts[
+                                                            reaction.id
+                                                        ] || 0
+                                                }}
+                                                reactionOptions={
+                                                    customReactions
+                                                }
+                                                reactions={[
+                                                    reactionsObject[reaction.id]
+                                                ]}
+                                                handleReaction={async () =>
+                                                    setClickedReactionId(
+                                                        reaction.id
+                                                    )
+                                                }
+                                            />
+                                        )
+                                )}
+                            </ReactionsListWrapper>
                         )}
                     </MainContent>
                 </BubbleContainer>
-                <MessageReaction
-                    isLiked={Boolean(didLike?.length)}
-                    onClick={onSendLikeReaction}
-                >
-                    👍
-                </MessageReaction>
+
+                <MessageOptionsWrapper>
+                    <MessageOptions
+                        displayLeft={false}
+                        messageWrapperRef={messageWrapperRef}
+                    />
+                </MessageOptionsWrapper>
             </ChatMessageWrapper>
             <Modal
-                open={isDisplayUsers}
-                onClose={() => setDisplayUsers(false)}
+                open={clickedReactionId !== ''}
+                onClose={() => setClickedReactionId('')}
                 isBoxShadow={false}
             >
                 <ListItems>
-                    {likeReactionsUsersList?.map((user: any) => (
-                        <Row>
-                            <MessageAvatar
-                                path={user?.image}
-                                width={40}
-                                height={40}
-                            />
-                            <UserName>{user?.name}</UserName>
-                        </Row>
-                    ))}
+                    {reactedUsersList
+                        ?.filter(
+                            (reactedUser) =>
+                                reactedUser.reactionId === clickedReactionId
+                        )
+                        ?.map((user: any) => (
+                            <Row>
+                                <MessageAvatar
+                                    path={user?.image}
+                                    width={40}
+                                    height={40}
+                                />
+                                <UserName>{user?.name}</UserName>
+                            </Row>
+                        ))}
                 </ListItems>
             </Modal>
         </>

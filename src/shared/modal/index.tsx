@@ -2,18 +2,19 @@ import { FunctionComponent, ReactNode } from 'react';
 import styled from 'styled-components';
 
 import CloseIcon from '../../assets/close-icon.svg';
+import { Colors } from 'src/utils/colors';
 
 const ModalContainer = styled('div')<{ isBoxShadow: Boolean }>`
     min-height: 60px;
     min-width: 60px;
-    background: #ffffff;
+    background: ${Colors.extra.white};
     position: fixed;
     display: flex;
     top: 50%;
     left: 50%;
     z-index: 100;
     transform: translate(-50%, -50%);
-    border: 1px solid #d3e6f8;
+    border: 1px solid ${Colors.theme.lightSkyBlue};
     border-radius: 8px;
     box-shadow: ${(props) => (props.isBoxShadow ? '0 0 152px black' : 'unset')};
 `;

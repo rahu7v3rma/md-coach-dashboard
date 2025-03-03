@@ -9,7 +9,14 @@ export const Container = styled.div`
     height: 100%;
 `;
 
+export const Header = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+`;
+
 export const LogBookView = styled.div`
+    flex: 1;
     display: flex;
     flex-direction: row;
     margin: 0 4px;
@@ -25,19 +32,18 @@ export const ClientView = styled.div`
     align-items: center;
 `;
 
-export const IntakeListView = styled.div`
+export const AssessmentView = styled.div`
     display: flex;
     flex-direction: column;
     flex: 0.65;
     overflow: hidden;
 `;
 
-export const IntakeListContainer = styled.div`
+export const AssessmentContainer = styled.div`
     display: flex;
     flex-direction: column;
     flex: 1;
     overflow: auto;
-    padding-right: 20px;
 `;
 
 export const LogBookContainer = styled.div`
@@ -62,29 +68,33 @@ export const TitleView = styled.div`
 
 export const TitleText = styled(Text)`
     font-size: 29px;
-    color: ${Colors.extra.black_text};
+    color: ${Colors.extra.blackText};
     font-weight: 600;
+    word-break: break-word;
 `;
 
 export const SubTitleText = styled(Text)`
     font-size: 13px;
-    color: ${Colors.extra.black_text};
+    color: ${Colors.extra.blackText};
     font-weight: 600;
     margin-top: 19px;
     margin-left: 9px;
 `;
 
+export const MedicationDoseText = styled.span`
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 10px;
+`;
+
 export const SubTitle = styled(Text)`
     font-size: 13px;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
     font-weight: 700;
     margin-top: 3px;
     margin-left: 9px;
 `;
 
-export const BreakLongText = styled(Text)`
-    font-size: 14px;
-`;
 export const SubView = styled.div`
     display: flex;
     flex-direction: column;
@@ -94,8 +104,39 @@ export const LessonView = styled.div`
     display: flex;
     flex-direction: column;
 `;
+export const ScrollTabView = styled.div(
+    ({ display }: { display?: boolean }) => `
+    display: ${display ? 'flex' : 'none'};
+    flex-direction: row;
+    background-color: ${Colors.extra.white};
+    align-items: center;
+    border-radius: 12px;
+    overflow: scroll;
+    overflow-x: hidden;
+`
+);
+
+export const IconView = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: ${Colors.extra.white};
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    cursor: pointer;
+`;
+export const ArrowRightView = styled.div`
+    display: flex;
+    position: absolute;
+    right: 40px;
+    padding-right: 10px;
+    background-color: ${Colors.extra.white};
+    cursor: pointer;
+`;
 export const FoodImg = styled(PlatformImage)`
-    background: #dadada;
+    background: ${Colors.extra.gainsboro};
     width: 100px;
     height: 90px;
     display: flex;
@@ -117,7 +158,7 @@ export const LessonImage = styled.img`
 
 export const CardHeading = styled(Text)`
     font-size: 18px;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
     font-weight: 600;
     margin-bottom: 18px;
 `;
@@ -135,7 +176,10 @@ export const LessionView = styled.div`
 export const BackImg = styled.img`
     width: 48px;
     height: 48px;
-    cursor: pointer;
+`;
+export const BackIconImg = styled.img`
+    width: 24px;
+    height: 24px;
 `;
 
 export const LogBookItemContainer = styled.div`
@@ -143,21 +187,16 @@ export const LogBookItemContainer = styled.div`
     cursor: pointer;
 `;
 
-export const ClientContactContainer = styled.div`
-    margin-top: 50px;
-    margin-right: 4%;
-`;
-
-export const HorizontalDividerLine = styled.div`
-    height: 2px;
-    background-color: ${Colors.extra.divider_color};
-    border-radius: 2px;
-    margin-left: 4px;
-    margin-right: 24px;
-`;
-
-export const ClientInfoWrapper = styled.div`
+export const MainContentWrapper = styled.div`
+    margin-top: 16px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    gap: 32px;
+    height: 100%;
+`;
+
+export const ContentContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 32px;
 `;

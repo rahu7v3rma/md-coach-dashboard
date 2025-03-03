@@ -29,9 +29,9 @@ jest.mock('src/contexts/appChat', () => ({
 }));
 
 const props = {
-    name: 'name',
     profileImg: 'profileImg',
-    chatId: 'chatId'
+    age: 'age',
+    type: 'type'
 };
 global.URL.createObjectURL = jest.fn(() => props.profileImg);
 

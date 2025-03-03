@@ -8,13 +8,13 @@ export const Wrapper = styled.div`
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background: #f5f8fb;
+    background: ${Colors.extra.white1};
     overflow: hidden;
 `;
 
-export const LoginCard = styled('div')`
+export const LoginCard = styled('form')`
     background: ${Colors.extra.white};
-    border: 1px solid #eef4fa;
+    border: 1px solid ${Colors.extra.aliceBlue};
     border-radius: 16px;
     box-sizing: border-box;
     display: flex;
@@ -36,7 +36,7 @@ export const LogoText = styled.span`
     font-weight: 800;
     font-size: 28px;
     line-height: 36px;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
     text-align: center;
     margin-bottom: 0.5em;
 `;
@@ -46,7 +46,7 @@ export const ErrorText = styled.span`
     font-weight: 400;
     font-size: 16x;
     line-height: 36px;
-    color: #ff0000;
+    color: ${Colors.extra.red};
     text-align: center;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -68,7 +68,7 @@ export const AllRightsText = styled.span`
     font-weight: 400;
     font-size: 12px;
     text-align: center;
-    color: #a4aaaf;
+    color: ${Colors.theme.gray};
     margin: 2em auto;
 `;
 
@@ -80,12 +80,12 @@ export const SelfInput = styled.span`
     width: 100%;
     padding: 0.85em 1em;
     border-style: solid;
-    border-color: #d3e6f8;
+    border-color: ${Colors.theme.lightSkyBlue};
     border-radius: 14px;
     overflow: hidden;
     box-sizing: content-box;
     cursor: pointer;
     :focus {
-        border: 2px solid ${Colors.extra.black};
+        border: 2px solid ${Colors.extra.darkLiver};
     }
 `;

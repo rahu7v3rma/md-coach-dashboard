@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { Colors } from 'src/utils/colors';
+
 export const Wrapper = styled.div`
     position: fixed;
     top: 0;
@@ -16,8 +18,8 @@ export const Popup = styled.div`
     background: rgba(110, 81, 208, 0.15);
     backdrop-filter: blur(4px);
     width: 304px;
-    background: #ffffff;
-    border: 1px solid #d3e6f8;
+    background: ${Colors.extra.white};
+    border: 1px solid ${Colors.theme.lightSkyBlue};
     border-radius: 16px;
     box-shadow: 0 0 152px black;
     padding: 24px;
@@ -40,7 +42,7 @@ export const PopupTitle = styled.h1`
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
-    color: #271a51;
+    color: ${Colors.extra.blackText};
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -66,10 +68,10 @@ export const SearchBarView = styled.div`
     display: flex;
     flex-direction: row;
     margin-top: 20px;
-    background: #f5f8fb;
+    background: ${Colors.extra.white1};
     border-width: 1px 1px 2px 1px;
     border-style: solid;
-    border-color: #d3e6f8;
+    border-color: ${Colors.theme.lightSkyBlue};
     border-radius: 18px;
     align-items: center;
     height: 48px;
@@ -92,12 +94,12 @@ export const TextInput = styled.input.attrs(() => ({
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: #271a51;
+    color: ${Colors.extra.blackText};
     border: none;
     background-color: transparent;
     margin-right: 18px;
     ::placeholder {
-        color: #a4aaaf;
+        color: ${Colors.theme.gray};
     }
     :focus-visible {
         outline: none;
@@ -108,7 +110,7 @@ export const HDevider = styled.div`
     width: 100%;
     margin-top: 20px;
     height: 1.5px;
-    background-color: #eef4fa;
+    background-color: ${Colors.extra.aliceBlue};
 `;
 
 export const ButtonsView = styled.div`
@@ -121,7 +123,7 @@ export const ButtonsView = styled.div`
 export const PopupActionButton = styled.button`
     border-width: 1px 1px 2px 1px;
     border-style: solid;
-    border-color: #d3e6f8;
+    border-color: ${Colors.theme.lightSkyBlue};
     border-radius: 12px;
     font-family: 'Poppins';
     font-style: normal;
@@ -134,14 +136,14 @@ export const PopupActionButton = styled.button`
     cursor: pointer;
 
     &.cancel {
-        background-color: #eef4fa;
-        color: #6e51d0;
+        background-color: ${Colors.extra.aliceBlue};
+        color: ${Colors.extra.slateBlue};
         margin-right: 6px;
     }
 
     &.next {
-        background-color: #6e51d0;
-        color: #ffffff;
+        background-color: ${Colors.extra.slateBlue};
+        color: ${Colors.extra.white};
         margin-left: 6px;
     }
 `;
@@ -182,7 +184,7 @@ export const TeamMemberName = styled.h1`
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
-    color: #271a51;
+    color: ${Colors.extra.blackText};
     margin: 0;
 `;
 
@@ -192,10 +194,10 @@ export const TeamMemberStatus = styled.p`
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
-    color: #a4aaaf;
+    color: ${Colors.theme.gray};
     margin: 0;
     margin-top: 2px;
     &.online {
-        color: #3a9a00;
+        color: ${Colors.extra.green};
     }
 `;

@@ -8,6 +8,7 @@ interface BadgeProps {
 
 export const TableWrapper = styled.div`
     border-radius: 20px;
+    margin-bottom: 200px;
     border: 1px solid ${Colors.theme.primaryLight};
     overflow: hidden;
     .rdt_Table {
@@ -17,7 +18,7 @@ export const TableWrapper = styled.div`
                 min-height: 0;
                 padding: 23px 0;
                 .rdt_TableCol {
-                    color: #fff;
+                    color: ${Colors.extra.white};
                     font-weight: 400;
                 }
             }
@@ -27,7 +28,10 @@ export const TableWrapper = styled.div`
                 border-bottom-color: ${Colors.theme.primaryLight};
                 cursor: pointer;
                 .rdt_TableCell {
-                    color: #271a51;
+                    :nth-child(3) div {
+                        white-space: wrap;
+                    }
+                    color: ${Colors.extra.blackText};
                     font-weight: 500;
                     font-size: 14px;
                 }
@@ -35,7 +39,11 @@ export const TableWrapper = styled.div`
         }
     }
     .rdt_Pagination {
-        background: #fff;
+        background: ${Colors.extra.white};
+    }
+    div[role='columnheader'] {
+        position: relative;
+        left: 5px;
     }
 `;
 
@@ -52,11 +60,11 @@ export const EngagementBadge = styled.div<BadgeProps>`
     margin: auto;
     background-color: ${(props) => {
         if (props.differenceInDays <= 1) {
-            return '#4DBA0B';
+            return Colors.extra.kellyGreen;
         } else if (props.differenceInDays <= 7) {
-            return '#DCD40F';
+            return Colors.extra.citrine;
         } else {
-            return '#D05151';
+            return Colors.extra.darkTerraCotta;
         }
     }};
 `;
@@ -65,7 +73,7 @@ export const CellText = styled.div`
     display: flex;
     align-items: center;
     &.green {
-        color: #4dba0b;
+        color: ${Colors.extra.kellyGreen};
     }
 `;
 

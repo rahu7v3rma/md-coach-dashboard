@@ -2,6 +2,7 @@ import { render } from '@testing-library/react';
 import { act, create } from 'react-test-renderer';
 
 import Button from '..';
+import { Size } from 'src/shared/text';
 
 describe('Button', () => {
     it('Button should renders without errors', () => {
@@ -28,7 +29,7 @@ describe('Button', () => {
                 testID={'buttonContent'}
                 backgroundColor="#f00"
                 color="#f00"
-                fontSize={14}
+                fontSize={Size.X2Small}
                 width="100%"
                 height="100%"
                 padding="10px"

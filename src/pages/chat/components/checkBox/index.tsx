@@ -1,6 +1,8 @@
 import { FunctionComponent, useCallback, useState } from 'react';
 import styled from 'styled-components';
 
+import { Colors } from 'src/utils/colors';
+
 const CheckIcon = './assets/icons/check.png';
 
 const Button = styled.button`
@@ -10,12 +12,12 @@ const Button = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #d6d6d6;
+    border: 1px solid ${Colors.extra.silver};
     background: transparent;
     padding: 0;
     overflow: hidden;
     &.checked {
-        background: #6e51d0;
+        background: ${Colors.extra.slateBlue};
         border: none;
         img {
             width: 100%;

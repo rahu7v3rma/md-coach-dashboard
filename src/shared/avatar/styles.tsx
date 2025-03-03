@@ -19,7 +19,7 @@ export const Wrapper = styled.div<{ online?: boolean }>`
                 height: 11px;
                 border-radius: 50%;
                 background: ${Colors.theme.primary};
-                border: 2px solid #ffffff;
+                border: 2px solid ${Colors.extra.white};
                 z-index: 1;
             }
     `}

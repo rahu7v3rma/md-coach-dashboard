@@ -19,7 +19,7 @@ export const ChatTitle = styled.div`
     font-weight: 600;
     font-size: 20px;
     line-height: 28px;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
     display: flex;
     overflow-x: hidden;
     white-space: pre-wrap

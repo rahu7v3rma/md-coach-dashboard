@@ -16,12 +16,14 @@ interface UserState {
     loading: boolean;
     userProfile: UserProfile | null;
     chatProfile: UserChatProfile | null;
+    isSideBarOpen: boolean;
 }
 
 const initialState = userAdapter.getInitialState({
     loading: false,
     userProfile: null,
-    chatProfile: null
+    chatProfile: null,
+    isSideBarOpen: false
 } as UserState);
 
 /**
@@ -133,7 +135,11 @@ export const logoutUser = createAsyncThunk(
 const userSlice = createSlice({
     name: 'user',
     initialState,
-    reducers: {},
+    reducers: {
+        toggleSidebar: (state, action) => {
+            state.isSideBarOpen = action.payload.isOpen;
+        }
+    },
     extraReducers: (builder) => {
         builder.addCase(login.pending, (state) => {
             state.loading = true;
@@ -218,12 +224,15 @@ const userSlice = createSlice({
     }
 });
 
+export const { toggleSidebar } = userSlice.actions;
+
 export default userSlice.reducer;
 
 interface UserSelectorsType {
     loading: boolean;
     userProfile: UserProfile | null;
     chatProfile: UserChatProfile | null;
+    isSideBarOpen: boolean;
 }
 
 export const UserSelectors = (): UserSelectorsType => {
@@ -237,9 +246,14 @@ export const UserSelectors = (): UserSelectorsType => {
         (state: RootState) => state.user.chatProfile
     );
 
+    const isSideBarOpen = useSelector(
+        (state: RootState) => state.user.isSideBarOpen
+    );
+
     return {
         loading,
         userProfile,
-        chatProfile
+        chatProfile,
+        isSideBarOpen
     };
 };

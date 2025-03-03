@@ -45,17 +45,24 @@ const Avatar: FunctionComponent<Props> = ({
             const selection = e.currentTarget.files;
 
             if (selection) {
-                setUploading(true);
+                const selectedFile = selection[0];
+                const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg'];
+                if (allowedTypes.includes(selectedFile?.type)) {
+                    setUploading(true);
 
-                uploadImage(
-                    selection[0],
-                    getFileContentType(selection[0]),
-                    true
-                )
-                    .then((uploadedPath: string) => {
-                        onNewAvatarUpload && onNewAvatarUpload(uploadedPath);
-                    })
-                    .finally(() => setUploading(false));
+                    uploadImage(
+                        selection[0],
+                        getFileContentType(selection[0]),
+                        true
+                    )
+                        .then((uploadedPath: string) => {
+                            onNewAvatarUpload &&
+                                onNewAvatarUpload(uploadedPath);
+                        })
+                        .finally(() => setUploading(false));
+                } else {
+                    alert('Please select a valid image file');
+                }
             }
         },
         [onNewAvatarUpload]
@@ -87,7 +94,7 @@ const Avatar: FunctionComponent<Props> = ({
                         aria-label="File input"
                         type="file"
                         onChange={handleSelectedFileChanged}
-                        accept="image/png, image/jpeg"
+                        accept="image/png,image/jpeg,image/jpg"
                     />
                     <ImageContainer
                         id="editOverlay"

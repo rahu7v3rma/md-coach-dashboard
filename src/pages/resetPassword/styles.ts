@@ -6,7 +6,7 @@ export const Page = styled.div`
     display: flex;
     width: 100%;
     height: 100vh;
-    background: #f5f8fb;
+    background: ${Colors.extra.white1};
 `;
 
 export const Container = styled.div`
@@ -41,7 +41,7 @@ export const Title = styled.h1`
     font-weight: 700;
     font-size: 28px;
     line-height: 36px;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
     margin-top: 55px;
 `;
 
@@ -51,7 +51,7 @@ export const Description = styled.p`
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
     margin: 0px;
     padding: 0px;
 `;
@@ -62,7 +62,7 @@ export const EmailInput = styled.input`
     background: ${Colors.extra.white};
     border-width: 1px 1px 3px 1px;
     border-style: solid;
-    border-color: #d3e6f8;
+    border-color: ${Colors.theme.lightSkyBlue};
     border-radius: 14px;
     outline: none;
     font-family: 'Poppins';
@@ -80,7 +80,7 @@ export const Button = styled.button`
     height: 56px;
     box-sizing: border-box;
     background: ${Colors.theme.primary};
-    border-bottom: 3px solid #5a3dbf;
+    border-bottom: 3px solid ${Colors.extra.oceanBlue};
     border-radius: 16px;
     margin-top: 24px;
     border: none;
@@ -101,7 +101,7 @@ export const CopyRights = styled.span`
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
-    color: #a4aaaf;
+    color: ${Colors.theme.gray};
     text-align: center;
     mix-blend-mode: normal;
     margin-top: 48px;
@@ -111,7 +111,7 @@ export const ErrorText = styled.span`
     font-weight: 400;
     font-size: 16x;
     line-height: 36px;
-    color: #ff0000;
+    color: ${Colors.extra.red};
     text-align: center;
     margin-top: 0.5em;
     margin-bottom: 0.5em;

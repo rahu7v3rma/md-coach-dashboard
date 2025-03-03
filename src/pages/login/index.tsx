@@ -55,35 +55,39 @@ const Login: FunctionComponent<Props> = ({}: Props) => {
         setIsPasswordError(!value);
     }, []);
 
-    const onLoginSubmit = useCallback(() => {
-        setIsEmailError(!email);
-        setIsPasswordError(!password);
+    const onLoginSubmit = useCallback(
+        (event: any) => {
+            event?.preventDefault();
+            setIsEmailError(!email);
+            setIsPasswordError(!password);
 
-        if (email && password) {
-            dispatch(login({ email, password }))
-                .unwrap()
-                .then((_: any) => {
-                    setIsError(false);
-                    setErrorMessage('');
+            if (email && password) {
+                dispatch(login({ email, password }))
+                    .unwrap()
+                    .then((_: any) => {
+                        setIsError(false);
+                        setErrorMessage('');
 
-                    // load tokens and navigate to an authorized page
-                    dispatch(refreshProfileSession({}));
-                    navigate('/clients');
-                })
-                .catch((error) => {
-                    setIsError(true);
-                    if (error.status === 401) {
-                        setErrorMessage('Incorrect username or password');
-                    } else {
-                        setErrorMessage('An unknown error has occurred');
-                    }
-                });
-        }
-    }, [email, password, dispatch, navigate]);
+                        // load tokens and navigate to an authorized page
+                        dispatch(refreshProfileSession({}));
+                        navigate('/clients');
+                    })
+                    .catch((error) => {
+                        setIsError(true);
+                        if (error.status === 401) {
+                            setErrorMessage('Incorrect username or password');
+                        } else {
+                            setErrorMessage('An unknown error has occurred');
+                        }
+                    });
+            }
+        },
+        [email, password, dispatch, navigate]
+    );
 
     return (
         <Wrapper>
-            <LoginCard>
+            <LoginCard onSubmit={onLoginSubmit}>
                 <img src={MDIcon} alt="MD Logo" />
                 {loading ? (
                     <Loader />
@@ -95,7 +99,6 @@ const Login: FunctionComponent<Props> = ({}: Props) => {
                         </LogoText>
 
                         {isError && <ErrorText>{errorMessage}</ErrorText>}
-
                         <Input
                             placeholder="Email"
                             type="email"
@@ -117,11 +120,11 @@ const Login: FunctionComponent<Props> = ({}: Props) => {
                             Forgot password?
                         </ForgotText>
 
-                        <Button onClick={onLoginSubmit}> Sign In</Button>
+                        <Button onClick={() => onLoginSubmit}> Sign In</Button>
                     </>
                 )}
                 <AllRightsText>
-                    © 20ХХ - 2022. All Rights Reserved. Mastering Programs{' '}
+                    © 2024. All Rights Reserved. Mastering Programs{' '}
                 </AllRightsText>
             </LoginCard>
         </Wrapper>

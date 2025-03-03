@@ -9,18 +9,17 @@ export const PageContent = styled.div`
     flex: 1;
     overflow: hidden;
     height: 100%;
-    margin-bottom: 24px;
 `;
 
 export const ChatContainer = styled.div<{
     height: number;
 }>`
     display: flex;
-    background-color: #fff;
+    background-color: ${Colors.extra.white};
     padding: 10px;
     border: 1px solid ${Colors.extra.lighter};
     border-radius: 16px;
-    ${({ height }) => `height: ${height - 200}px;`}
+    ${({ height }) => `height: ${height - 245}px;`}
 `;
 
 export const PageHeader = styled.div`
@@ -44,6 +43,6 @@ export const TimeLabel = styled.div`
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
     margin-left: 11px;
 `;

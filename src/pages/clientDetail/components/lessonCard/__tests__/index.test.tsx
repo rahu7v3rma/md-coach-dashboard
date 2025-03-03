@@ -25,7 +25,7 @@ test('renders LessonCard component with all props', () => {
 });
 
 test('renders LessonCard component with missing title, time and image props', () => {
-    const view = render(<LessonCard title="" imageUrl="" subTitle="" />);
+    const view = render(<LessonCard lesson="" title="" />);
     expect(view.container.textContent).toBe('No Lesson Found');
 });
 

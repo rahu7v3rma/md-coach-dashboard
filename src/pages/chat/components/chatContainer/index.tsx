@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect, useState } from 'react';
+import { FunctionComponent, useCallback, useEffect, useState } from 'react';
 import {
     Channel,
     MessageInput,
@@ -15,6 +15,7 @@ import {
     Message
 } from '../../components';
 import GroupSideDetails from '../groupSideDetails';
+import { Avatar } from 'src/shared';
 
 import { Container, MessageContainer } from './styles';
 
@@ -56,6 +57,10 @@ const ChatContainer: FunctionComponent<Props> = ({ initialChannelId }) => {
         setShowSideDetails(!showSideDetails);
     };
 
+    const CustomAvatar = useCallback(({ image }: any) => {
+        return <Avatar path={image} className="quoted-avatar" />;
+    }, []);
+
     return (
         <Container>
             <MessageContainer>
@@ -63,12 +68,13 @@ const ChatContainer: FunctionComponent<Props> = ({ initialChannelId }) => {
                     DateSeparator={CustomeDateSeparator}
                     Message={Message}
                     Input={ChatMessageInput}
+                    Avatar={CustomAvatar}
                 >
                     <Window>
                         <ChatHeader
                             onCollapseButtonClick={onCollapseButtonClick}
                         />
-                        <MessageList />
+                        <MessageList messageActions={['quote', 'react']} />
                         <MessageInput />
                     </Window>
                     {showSideDetails && (

@@ -47,7 +47,7 @@ const LogBookItem: FC<Props> = (props: Props) => {
                             marginLeft={15}
                             fontWeight="600"
                             lineHeight="20px"
-                            fontSize={Size.XXSmall}
+                            fontSize={Size.X2Small}
                             fontFamily='"Poppins", sans-serif'
                         >
                             {title}
@@ -60,11 +60,11 @@ const LogBookItem: FC<Props> = (props: Props) => {
                     )}
                     <TimeContainer>
                         <Text
-                            color={Colors.extra.black_text}
+                            color={Colors.extra.blackText}
                             marginRight={12}
                             lineHeight="20px"
                             fontWeight="500"
-                            fontSize={Size.XXSmall}
+                            fontSize={Size.X2Small}
                             fontFamily='"Poppins", sans-serif'
                         >
                             {time}

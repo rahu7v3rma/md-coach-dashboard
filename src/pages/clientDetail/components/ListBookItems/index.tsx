@@ -5,11 +5,11 @@ import { logType } from '../../../../types/log';
 import { logTypeDetails } from '../../../../utils/constants';
 import { LogBookItem } from '../../components';
 import {
-    BreakLongText,
     CardLogTitle,
     LessionView,
     LessonImage,
     LogBookItemContainer,
+    MedicationDoseText,
     SubTitle,
     SubTitleText,
     SubView,
@@ -20,23 +20,6 @@ import {
 type Props = {
     list: logType[];
     groupTitle: string;
-};
-
-const BreakText = (text: any) => {
-    if (text.length > 13) {
-        let firstLine = text.substring(0, 13);
-        let secondLine = text.substring(13);
-        text = (
-            <div>
-                <span>{firstLine}</span>
-                <br />
-                <BreakLongText>{secondLine}</BreakLongText>
-            </div>
-        );
-        return text;
-    }
-
-    return text;
 };
 
 const roundNumbers = (item: any) => {
@@ -52,15 +35,10 @@ const roundNumbers = (item: any) => {
     return itemLocal;
 };
 
-const minutesToHours = (minutes: string | number) => {
-    return parseFloat((Number(minutes) / 60).toFixed(2));
-};
-
 const minutesToHoursAndMinutes = (minutes: number): string => {
     const formattedHours = String(Math.floor(minutes / 60)).padStart(2, '0');
     const formattedMinutes = String(minutes % 60).padStart(2, '0');
-    const formattedTime = `${formattedHours}:${formattedMinutes}`;
-    return formattedTime;
+    return `${formattedHours}:${formattedMinutes}`;
 };
 
 const ListBookItems: FC<Props> = ({ list, groupTitle }: Props) => {
@@ -99,19 +77,20 @@ const ListBookItems: FC<Props> = ({ list, groupTitle }: Props) => {
                                 {item.duration_minutes && (
                                     <>
                                         <TitleText>
-                                            {item.type === 'UserFast'
-                                                ? minutesToHoursAndMinutes(
-                                                      item.duration_minutes
-                                                  )
-                                                : minutesToHours(
-                                                      item.duration_minutes
-                                                  )}
+                                            {minutesToHoursAndMinutes(
+                                                item.duration_minutes
+                                            )}
                                         </TitleText>
                                     </>
                                 )}
                                 {item.drug_name && (
                                     <TitleText>
-                                        {BreakText(item.drug_name)}
+                                        {item.drug_name}
+                                        {item.dose && (
+                                            <MedicationDoseText>
+                                                {`${item.amount} ${item.dose}`}
+                                            </MedicationDoseText>
+                                        )}
                                     </TitleText>
                                 )}
                                 {item.units && (
@@ -122,15 +101,7 @@ const ListBookItems: FC<Props> = ({ list, groupTitle }: Props) => {
                                         {item.injection_type}
                                     </SubTitleText>
                                 )}
-                                {item.type === 'UserMedication' ? (
-                                    <>
-                                        {item.dose && (
-                                            <SubTitleText>
-                                                {`${item.amount} ${item.dose}`}
-                                            </SubTitleText>
-                                        )}
-                                    </>
-                                ) : (
+                                {item.type !== 'UserMedication' && (
                                     <>
                                         {item.amount && (
                                             <TitleText>{item.amount}</TitleText>

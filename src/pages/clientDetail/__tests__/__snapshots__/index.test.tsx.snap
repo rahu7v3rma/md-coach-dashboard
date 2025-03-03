@@ -1,0 +1,453 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClientDetail renders the client detail page properly 1`] = `
+<div
+  className="sc-iKdXkR cdCBXf"
+>
+  <div
+    className="sc-jqmfkj dxnfn"
+  >
+    <div
+      className="sc-jfxBVY ieajce"
+    >
+      <div
+        className="sc-ilhFlB ktqGfN"
+      >
+        <img
+          alt="MD Icon"
+          className="sc-bTuCdP dwKZtN"
+          src={Object {}}
+        />
+        <p
+          className="sc-fNZzEh fwQNpY"
+        >
+          Mastering 
+          <br />
+          Programs
+        </p>
+      </div>
+      <div
+        className="sc-fyPSjY hBHmAo"
+      >
+        <div
+          className="sc-hKbBkQ kjgbPi"
+          onClick={[Function]}
+          selected={false}
+        >
+          <div
+            className="sc-esDySZ iugWGG"
+          >
+            <img
+              alt="My Clients"
+              src={Object {}}
+            />
+          </div>
+          <p
+            className="sc-bsoyde dxwDtV"
+            selected={false}
+          >
+            My Clients
+          </p>
+        </div>
+        <div
+          className="sc-hKbBkQ kjgbPi"
+          onClick={[Function]}
+          selected={false}
+        >
+          <div
+            className="sc-esDySZ iugWGG"
+          >
+            <img
+              alt="Chat"
+              src={Object {}}
+            />
+          </div>
+          <p
+            className="sc-bsoyde dxwDtV"
+            selected={false}
+          >
+            Chat
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-dTHgTJ dlAqcb"
+    >
+      <div
+        className="sc-TsgdO bfDuRx"
+      >
+        <div
+          className="sc-iRpNkT gCKbMu"
+        >
+          <p
+            className="sc-kxtUkE ktjuwa"
+            fontWeight="600"
+          >
+            Logout
+          </p>
+          <p
+            className="sc-kxtUkE jsVapv"
+            color="#A4AAAF"
+            fontSize={11}
+            fontWeight="500"
+          >
+            Click below to logout the dashboard
+          </p>
+        </div>
+        <button
+          className="sc-kPTPQs dzwBew"
+          height="40px"
+          id="logoutBtn"
+          onClick={[Function]}
+        >
+          <p
+            className="sc-kxtUkE dUXwvX"
+            fontSize={12}
+            fontWeight="600"
+          >
+            Logout
+          </p>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-fXMkjo ebnBbc"
+    style={
+      Object {
+        "overflow": "hidden",
+      }
+    }
+  >
+    <div
+      className="sc-dzpDMA lnJyhZ"
+    >
+      <div
+        className="sc-eavHNl fMpyii"
+      >
+        <div
+          className="sc-fmJwAE hLwWab"
+        >
+          <img
+            className="sc-bHoguv fEWYAf"
+            src={Object {}}
+          />
+          <input
+            className="sc-kkscRO hZZEqs"
+            onChange={[Function]}
+            placeholder="Search"
+          />
+        </div>
+      </div>
+      <div
+        className="sc-vdgyJ eomBSg"
+      >
+        <div
+          className="sc-bodULI cNRoFk"
+          onClick={[Function]}
+        >
+          <img
+            className="sc-dDzzvS hlxLjW"
+            src={Object {}}
+          />
+        </div>
+        <div
+          className="sc-fFGjHI fiLKAe"
+        >
+          <label>
+            <input
+              accept="image/png, image/jpeg"
+              aria-label="File input"
+              className="sc-gxYJeL fcIGhX"
+              id="handleSelectedFileChanged"
+              onChange={[Function]}
+              type="file"
+            />
+            <div
+              className="sc-dicizt hLxdUU sc-ezrZMB lgnPmK"
+              id="editOverlay"
+            >
+              <img
+                alt="avatar"
+                className="sc-ewnqHT sc-ezrZMB lgnPmK"
+                id="defaultAvatar"
+                src={Object {}}
+              />
+              <img
+                alt="edit"
+                className="sc-iVCKna dSjaUI"
+                src={Object {}}
+              />
+            </div>
+          </label>
+        </div>
+      </div>
+      <div
+        className="sc-gLkRiC gHVgEg"
+        hidden={true}
+        onScroll={[Function]}
+      >
+        <div
+          className="sc-dGYtUL goWHdG"
+        >
+          <span
+            className="sc-fQUUyf jxQPeB"
+          >
+            Notifications
+          </span>
+          <img
+            alt="Bell Icon"
+            className="sc-deDhwC bzjFrc"
+            onClick={[Function]}
+            role="button"
+            src={Object {}}
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-csqUdf CZBoD"
+      style={
+        Object {
+          "flex": 1,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <div
+        className="sc-derkYz bnuQIs"
+      >
+        <div
+          className="sc-bnRYnF hElrsx"
+        >
+          <div
+            className="sc-XMxGW dIAfPc"
+          >
+            <img
+              className="sc-ffyeCz dwDuzp"
+              data-testid="backbutton"
+              onClick={[Function]}
+              src={Object {}}
+            />
+            <div
+              className="sc-hYdjyz cwTWCS"
+            >
+              <div
+                className="sc-fFGjHI fiLKAe"
+              >
+                <div
+                  className="sc-dicizt fDkbuM sc-fkuNvB iYjqCo"
+                >
+                  <img
+                    alt="avatar"
+                    className="sc-ewnqHT sc-fkuNvB iYjqCo"
+                    id="defaultAvatar"
+                    src={Object {}}
+                  />
+                </div>
+              </div>
+              <div
+                className="sc-flLwwW lgUxzz"
+              >
+                <p
+                  className="sc-kxtUkE dVqPq sc-ghDWNF bUrKjz"
+                >
+                  test test
+                </p>
+                <button
+                  className="sc-kPTPQs jWIHQp sc-haUagv dhFdDo"
+                  height="40px"
+                  onClick={[Function]}
+                  width="97px"
+                >
+                  <img
+                    className="sc-eoCneS cLOhRH"
+                    src={Object {}}
+                  />
+                  <p
+                    className="sc-kxtUkE dVqPq sc-dvmjMc ccluWs"
+                  >
+                    Chat
+                  </p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            className="sc-fDkjNg kJcsAJ"
+          >
+            <p
+              className="sc-kxtUkE dVqPq sc-eGbavc UGZzn"
+            >
+              Next Lesson
+            </p>
+            <div
+              className="sc-ispOId eJtfGw"
+              height="100px"
+              width="335px"
+            >
+              <img
+                alt="icon"
+                className="sc-cydatY iUjuvk"
+                data-testid="lesson_image"
+                onError={[Function]}
+                src="TestIcon"
+              />
+              <div
+                className="sc-hakzzD bJKYjU"
+              >
+                <p
+                  className="sc-kxtUkE SwUFv"
+                  color="#271A51"
+                  data-testid="lesson_title"
+                  fontWeight="700"
+                >
+                  Test Title
+                </p>
+                <p
+                  className="sc-kxtUkE bBnJvm"
+                  color="#A4AAAF"
+                  data-testid="lesson_subtitle"
+                  fontSize={12}
+                  fontWeight="300"
+                >
+                  Part 1
+                </p>
+              </div>
+              <div
+                className="sc-enSMya eQGKaW"
+              >
+                <p
+                  className="sc-kxtUkE bFrTyG"
+                  color="#72996B"
+                  fontSize={12}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            className="sc-hpzAOI fzJPXt"
+          >
+            <div
+              className="sc-eksrvA ccWhGN"
+            >
+              <div
+                className="sc-bgfUhJ eLtpxz"
+              >
+                <img
+                  className="sc-gaidzC hacvHb"
+                  id="phoneIcon"
+                  src={Object {}}
+                />
+                <p
+                  className="sc-kxtUkE XQNVf"
+                  color="#271A51"
+                  data-testid="phone_number"
+                  fontSize={16}
+                  fontWeight="500"
+                >
+                  1234567891
+                </p>
+              </div>
+              <div
+                className="sc-bgfUhJ eLtpxz"
+              >
+                <img
+                  className="sc-gaidzC hacvHb"
+                  id="emailIcon"
+                  src={Object {}}
+                />
+                <p
+                  className="sc-kxtUkE XQNVf"
+                  color="#271A51"
+                  data-testid="email"
+                  fontSize={16}
+                  fontWeight="500"
+                >
+                  demo@gmail.com
+                </p>
+              </div>
+              <div
+                className="sc-bgfUhJ eLtpxz"
+              >
+                <button
+                  className="sc-kPTPQs bRxusK"
+                  color="#271A51"
+                  data-testid="ageButton"
+                  fontSize={14}
+                  id="ageButton"
+                >
+                  
+                                    Age: 
+                                    33
+                                
+                </button>
+                <span
+                  className="sc-cVVGlL cqKDik"
+                />
+                <button
+                  className="sc-kPTPQs croZoL"
+                  color="#271A51"
+                  data-testid="typeButton"
+                  fontSize={14}
+                  id="typeButton"
+                >
+                  type 1
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="sc-kjaWZf kgExRI"
+        />
+        <div
+          className="sc-eVmQbm dEDQLD"
+        >
+          <div
+            className="sc-deNDqs gRTwZy"
+          >
+            <p
+              className="sc-kxtUkE dVqPq sc-eGbavc UGZzn"
+            >
+              Intake Form Answers
+            </p>
+            <div
+              className="sc-chibGv kSDqKi"
+            />
+          </div>
+          <div
+            className="sc-dYdGJi fGPxSG"
+          >
+            <p
+              className="sc-kxtUkE dVqPq sc-eGbavc UGZzn"
+            >
+              Logbook
+            </p>
+            <div
+              className="infinite-scroll-component__outerdiv"
+              style={Object {}}
+            >
+              <div
+                className="infinite-scroll-component "
+                style={
+                  Object {
+                    "WebkitOverflowScrolling": "touch",
+                    "height": 550,
+                    "overflow": "auto",
+                  }
+                }
+              >
+                <h4>
+                  Loading...
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

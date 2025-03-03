@@ -2,17 +2,17 @@ import { FunctionComponent } from 'react';
 import styled from 'styled-components';
 
 export enum Size {
-    XXXXSmall = 11,
-    XXXSmall = 12,
-    XXSmall = 14,
+    X4Small = 11,
+    X3Small = 12,
+    X2Small = 14,
     XSmall = 16,
     Small = 18,
     Medium = 20,
     Large = 24,
     XLarge = 28,
-    XXLarge = 30,
-    XXXLarge = 34,
-    XXXXLarge = 38
+    X2Large = 32,
+    X3Large = 34,
+    X4Large = 38
 }
 
 export type FontWeight =
@@ -30,7 +30,7 @@ export type FontWeight =
 
 const StyledText = styled.p<Props>`
     color: ${(p) => p.color};
-    font-size: ${(p) => p.fontSize || Size.XXSmall}px;
+    font-size: ${(p) => p.fontSize || Size.X2Small}px;
     font-weight: ${(p) => p.fontWeight};
     text-align: ${(p) => p.textAlign};
     text-decoration-line: ${(p) => p.textDecorationLine};
@@ -48,6 +48,7 @@ const StyledText = styled.p<Props>`
     font-family: ${(p) => p.fontFamily};
     margin-right: ${(p) => p.marginRight}px;
     margin-left: ${(p) => p.marginLeft}px;
+    word-wrap: ${(p) => p.wordWrap};
 `;
 
 type Props = {
@@ -75,6 +76,13 @@ type Props = {
     marginRight?: number;
     marginLeft?: number;
     onClick?: React.MouseEventHandler<HTMLParagraphElement>;
+    wordWrap?:
+        | 'break-word'
+        | 'inherit'
+        | 'initial'
+        | 'revert'
+        | 'revert-layer'
+        | 'unset';
 };
 
 const Text: FunctionComponent<Props> = ({ children, ...props }: Props) => {

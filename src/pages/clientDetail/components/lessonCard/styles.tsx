@@ -1,26 +1,17 @@
 import styled from 'styled-components';
 
-export const Image = styled.img`
-    height: 4rem;
-    width: 4rem;
-`;
+import { Text } from 'src/shared';
+import { Colors } from 'src/utils/colors';
 
 export const LessonDetails = styled.div`
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    justify-content: space-between;
-    height: 100%;
-    padding-bottom: 6px;
+    margin-top: 14px;
+    width: 147px;
 `;
 
-export const ActionDetails = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    gap: 0.5rem;
-    justify-content: flex-end;
-    height: 100%;
-    padding-bottom: 6px;
+export const Title = styled(Text)`
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: ${Colors.extra.black};
+    padding-left: 4px;
 `;

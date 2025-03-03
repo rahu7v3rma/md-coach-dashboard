@@ -129,8 +129,7 @@ const ResetPasswordChange: FunctionComponent<Props> = ({}: Props) => {
                         </Button>
                         <AllRightsText>
                             {' '}
-                            © 20ХХ - 2022. All Rights Reserved. Mastering
-                            Diabetes{' '}
+                            © 2024. All Rights Reserved. Mastering Diabetes{' '}
                         </AllRightsText>
                     </>
                 )}

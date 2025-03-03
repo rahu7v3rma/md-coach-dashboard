@@ -84,15 +84,22 @@ const submitForm = async () => {
 
 test('displays error message on form submission error', async () => {
     view.unmount();
-    const errorMessage = 'internal server error';
+    let errorMessage = 'Please enter a valid email address';
     mockDispatch.mockReturnValueOnce({
-        unwrap: jest.fn(() =>
-            Promise.reject({ code: 500, message: errorMessage })
-        )
+        unwrap: jest.fn(() => Promise.reject({ status: 400 }))
     });
-    render(<ResetPassword />);
+    view = render(<ResetPassword />);
     await act(() => submitForm());
-    const errorText = await screen.findByText(errorMessage);
+    let errorText = await screen.findByText(errorMessage);
+    expect(errorText).toBeVisible();
+    view.unmount();
+    mockDispatch.mockReturnValueOnce({
+        unwrap: jest.fn(() => Promise.reject({ status: 500 }))
+    });
+    view = render(<ResetPassword />);
+    await act(() => submitForm());
+    errorMessage = 'An unknown error has occurred';
+    errorText = await screen.findByText(errorMessage);
     expect(errorText).toBeVisible();
 });
 

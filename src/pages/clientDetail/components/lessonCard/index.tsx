@@ -1,50 +1,29 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 
-import { Card, Text } from 'src/shared';
+import { Text } from 'src/shared';
+import { Size } from 'src/shared/text';
 import { Colors } from 'src/utils/colors';
 
-import { ActionDetails, Image, LessonDetails } from './styles';
+import { LessonDetails, Title } from './styles';
 
 export type Props = {
-    imageUrl: string;
-    title: string;
-    subTitle: string;
-    time?: string;
-    onClick?: () => void;
+    lesson?: string;
+    title?: string;
 };
 
-const LessonCard: FC<Props> = (props: Props) => {
-    const [hasError, setHasError] = useState(false);
-    function handleImageError() {
-        setHasError(true);
-    }
+const LessonCard: FC<Props> = ({ lesson, title }: Props) => {
     return (
-        <Card width="335px" height="100px">
-            {!hasError && (
-                <Image
-                    src={props.imageUrl}
-                    alt="icon"
-                    onError={handleImageError}
-                />
-            )}
-            <LessonDetails>
-                <Text color={Colors.extra.black_text} fontWeight="700">
-                    {props.title || 'No Lesson Found'}
-                </Text>
-                <Text
-                    color={Colors.extra.sub_title_text}
-                    fontWeight="300"
-                    fontSize={12}
-                >
-                    {props.subTitle}
-                </Text>
-            </LessonDetails>
-            <ActionDetails>
-                <Text color={Colors.theme.primary} fontSize={12}>
-                    {props.time}
-                </Text>
-            </ActionDetails>
-        </Card>
+        <LessonDetails>
+            <Text
+                color={Colors.theme.gray}
+                fontWeight="600"
+                fontSize={Size.X3Small}
+                data-testid="lesson_subtitle"
+            >
+                {lesson}
+                <Title>{title || 'No Lesson Found'}</Title>
+            </Text>
+        </LessonDetails>
     );
 };
 

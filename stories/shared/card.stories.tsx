@@ -2,6 +2,7 @@ import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
 import { Card } from '../../src/shared';
+import { Colors } from '../../src/utils/colors';
 
 interface CardProps {
     children?: React.ReactNode;
@@ -26,9 +27,9 @@ const Template: Story<CardProps> = (args) => <Card {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
     children: 'card',
-    backgroundColor: '#fff',
+    backgroundColor: Colors.extra.white,
     borderWidth: '1px',
-    borderColor: '#fff',
+    borderColor: Colors.extra.white,
     borderStyle: 'solid',
     borderRadius: '16px',
     padding: '16px 12px',

@@ -10,6 +10,7 @@ import styled from 'styled-components';
 
 import Avatar from '../../../../assets/images/Avatar.png';
 import Search from '../../../../assets/images/Search.png';
+import { Colors } from 'src/utils/colors';
 
 const SearchDiv = styled.div`
     box-sizing: border-box;
@@ -18,10 +19,10 @@ const SearchDiv = styled.div`
     align-items: center;
     padding: 8px 16px;
     height: 48px;
-    background: #f5f8fb;
+    background: ${Colors.extra.white1};
     border-width: 1px 1px 2px 1px;
     border-style: solid;
-    border-color: #d3e6f8;
+    border-color: ${Colors.theme.lightSkyBlue};
     border-radius: 18px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -39,11 +40,11 @@ const SearchInput = styled.input`
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: #a4aaaf;
+    color: ${Colors.theme.gray};
     border: none;
     outline: none;
     flex: 1;
-    background: #f5f8fb;
+    background: ${Colors.extra.white1};
     padding-left: 11px;
 `;
 
@@ -84,7 +85,7 @@ const MemberName = styled.span`
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    color: #271a51;
+    color: ${Colors.extra.blackText};
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -98,7 +99,7 @@ const MemberStatus = styled.span`
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
-    color: #3a9a00;
+    color: ${Colors.extra.green};
     padding-top: 2px;
 `;
 
@@ -186,7 +187,9 @@ const AddGroupMembers: FunctionComponent<Props> = ({
                         <MemberStatus
                             id={`memberStatus-${index}`}
                             style={{
-                                color: item.online ? '#3a9a00' : '#A4AAAF'
+                                color: item.online
+                                    ? Colors.extra.green
+                                    : Colors.theme.gray
                             }}
                         >
                             {item.role === 'guest'

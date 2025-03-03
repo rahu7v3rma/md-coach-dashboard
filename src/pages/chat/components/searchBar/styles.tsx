@@ -32,12 +32,12 @@ export const TextInput = styled.input.attrs(() => ({
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    color: #271a51;
+    color: ${Colors.extra.blackText};
     border: none;
     background-color: transparent;
     margin-right: 18px;
     ::placeholder {
-        color: ${Colors.extra.greyLight};
+        color: ${Colors.theme.gray};
     }
     :focus-visible {
         outline: none;

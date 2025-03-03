@@ -6,12 +6,13 @@ import styled, { css } from 'styled-components';
 //import Camera from '../../../../assets/images/Camera.png';
 import Close from '../../../../assets/images/Close.png';
 import AddGroupMembers from '../addGroupMembers';
+import { Colors } from 'src/utils/colors';
 
 const Modal = styled.div`
     width: 304px;
     height: auto;
-    background: #ffffff;
-    border: 1px solid #d3e6f8;
+    background: ${Colors.extra.white};
+    border: 1px solid ${Colors.theme.lightSkyBlue};
     border-radius: 16px;
     position: absolute;
     top: 50%;
@@ -36,7 +37,7 @@ const Title = styled.span`
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    color: #271a51;
+    color: ${Colors.extra.blackText};
 `;
 
 const CloseIcon = styled.img`
@@ -67,7 +68,7 @@ const TextInput = styled.input`
     gap: 44px;
     width: 196px;
     height: 48px;
-    border: 1.5px solid #d3e6f8;
+    border: 1.5px solid ${Colors.theme.lightSkyBlue};
     border-radius: 16px;
     flex: none;
     order: 1;
@@ -78,7 +79,7 @@ const TextInput = styled.input`
 
 const Divider = styled.div`
     height: 0px;
-    border: 1.5px solid #eef4fa;
+    border: 1.5px solid ${Colors.extra.aliceBlue};
     flex: none;
     order: 2;
     align-self: stretch;
@@ -110,17 +111,20 @@ const CommonButtonStyles = css`
 `;
 
 const CancelButton = styled.button`
-    background: #eef4fa;
-    border-color: #d3e6f8;
-    color: #6e51d0;
+    background: ${Colors.extra.aliceBlue};
+    border-color: ${Colors.theme.lightSkyBlue};
+    color: ${Colors.extra.slateBlue};
     margin-right: 6px;
     ${CommonButtonStyles};
 `;
 
 const NextButton = styled.button`
-    background: ${(props) => (props.disabled ? '#D6D6D6' : '#6e51d0')};
-    border-color: ${(props) => (props.disabled ? '#D6D6D6' : '#5a3dbf')};
-    color: ${(props) => (props.disabled ? '#A4AAAF' : '#ffffff')};
+    background: ${(props) =>
+        props.disabled ? Colors.extra.silver : Colors.extra.slateBlue};
+    border-color: ${(props) =>
+        props.disabled ? Colors.extra.silver : Colors.extra.oceanBlue};
+    color: ${(props) =>
+        props.disabled ? Colors.theme.gray : Colors.extra.white};
     margin-left: 6px;
     ${CommonButtonStyles};
 `;

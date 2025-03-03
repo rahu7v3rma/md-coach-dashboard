@@ -11,6 +11,7 @@ import { getProfile } from '../../reducers/user';
 import { hasAuthToken } from '../../services/auth';
 import { DashboardLayout, Text } from '../../shared';
 import { Colors } from '../../utils/colors';
+import { Size } from 'src/shared/text';
 
 import {
     ChatList,
@@ -65,8 +66,8 @@ const Chat: FunctionComponent<Props> = ({}: Props) => {
                     <PageContent>
                         <PageHeader>
                             <Text
-                                color={Colors.extra.black}
-                                fontSize={32}
+                                color={Colors.extra.darkLiver}
+                                fontSize={Size.X2Large}
                                 fontWeight="700"
                                 lineHeight="36px"
                             >

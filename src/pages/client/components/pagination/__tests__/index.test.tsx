@@ -7,7 +7,7 @@ import store from 'src/store';
 const nextPageNumber = 3;
 const previousPageNumber = 1;
 jest.mock('src/reducers/client', () => ({
-    ClientSelectors: jest.fn().mockImplementation(() => ({
+    NoteSelectors: jest.fn().mockImplementation(() => ({
         loading: true,
         nextPageNumber: nextPageNumber,
         previousPageNumber: previousPageNumber,

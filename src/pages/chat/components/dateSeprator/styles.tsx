@@ -10,5 +10,5 @@ export const DatePopup = styled.div`
     margin: 1em auto;
     font-size: 12px;
     font-weight: 600;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
 `;

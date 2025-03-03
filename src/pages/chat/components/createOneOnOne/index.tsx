@@ -5,12 +5,13 @@ import styled from 'styled-components';
 
 import Close from '../../../../assets/images/Close.png';
 import AddGroupMembers from '../addGroupMembers';
+import { Colors } from 'src/utils/colors';
 
 const Modal = styled.div`
     width: 304px;
     height: auto;
-    background: #ffffff;
-    border: 1px solid #d3e6f8;
+    background: ${Colors.extra.white};
+    border: 1px solid ${Colors.theme.lightSkyBlue};
     border-radius: 16px;
     position: absolute;
     top: 50%;
@@ -35,7 +36,7 @@ const Title = styled.span`
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    color: #271a51;
+    color: ${Colors.extra.blackText};
 `;
 
 const CloseIcon = styled.img`
@@ -46,7 +47,7 @@ const CloseIcon = styled.img`
 
 const Divider = styled.div`
     height: 0px;
-    border: 1.5px solid #eef4fa;
+    border: 1.5px solid ${Colors.extra.aliceBlue};
     flex: none;
     order: 2;
     align-self: stretch;

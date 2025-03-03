@@ -111,23 +111,14 @@ const ListItem: FunctionComponent<Props> = ({
                     </Text>
                     <Time
                         textAlign="right"
-                        fontSize={11}
+                        fontSize={Size.X4Small}
                         fontWeight="400"
-                        color={
-                            read
-                                ? Colors.extra.sub_title_text
-                                : Colors.theme.gray
-                        }
+                        color={Colors.theme.gray}
                     >
                         {formattedTime}
                     </Time>
                 </NameView>
-                <Text
-                    fontSize={11}
-                    color={
-                        read ? Colors.extra.sub_title_text : Colors.theme.gray
-                    }
-                >
+                <Text fontSize={Size.X4Small} color={Colors.theme.gray}>
                     {description}
                 </Text>
             </DetailView>

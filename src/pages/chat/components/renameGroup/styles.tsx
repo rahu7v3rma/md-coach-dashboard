@@ -1,10 +1,12 @@
 import styled, { css } from 'styled-components';
 
+import { Colors } from 'src/utils/colors';
+
 export const Modal = styled.div`
     width: 304px;
     height: auto;
-    background: #ffffff;
-    border: 1px solid #d3e6f8;
+    background: ${Colors.extra.white};
+    border: 1px solid ${Colors.theme.lightSkyBlue};
     border-radius: 16px;
     position: fixed;
     top: 50%;
@@ -29,7 +31,7 @@ export const Title = styled.span`
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    color: #271a51;
+    color: ${Colors.extra.blackText};
 `;
 
 export const CloseIcon = styled.img`
@@ -60,7 +62,7 @@ export const TextInput = styled.input`
     gap: 44px;
     width: 196px;
     height: 48px;
-    border: 1.5px solid #d3e6f8;
+    border: 1.5px solid ${Colors.theme.lightSkyBlue};
     border-radius: 16px;
     flex: none;
     order: 1;
@@ -71,7 +73,7 @@ export const TextInput = styled.input`
 
 export const Divider = styled.div`
     height: 0px;
-    border: 1.5px solid #eef4fa;
+    border: 1.5px solid ${Colors.extra.aliceBlue};
     flex: none;
     order: 2;
     align-self: stretch;
@@ -103,17 +105,17 @@ const CommonButtonStyles = css`
 `;
 
 export const CancelButton = styled.button`
-    background: #eef4fa;
-    border-color: #d3e6f8;
-    color: #6e51d0;
+    background: ${Colors.extra.aliceBlue};
+    border-color: ${Colors.theme.lightSkyBlue};
+    color: ${Colors.extra.slateBlue};
     margin-right: 6px;
     ${CommonButtonStyles};
 `;
 
 export const NextButton = styled.button`
-    background: #6e51d0;
-    border-color: #5a3dbf;
-    color: #ffffff;
+    background: ${Colors.extra.slateBlue};
+    border-color: ${Colors.extra.oceanBlue};
+    color: ${Colors.extra.white};
     margin-left: 6px;
     ${CommonButtonStyles};
 `;

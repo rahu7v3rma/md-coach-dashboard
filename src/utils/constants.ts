@@ -6,8 +6,9 @@ import Insulin from 'src/assets/insulin.svg';
 import Medication from 'src/assets/medication.svg';
 import Timer from 'src/assets/timer.svg';
 import Weight from 'src/assets/weight.svg';
+import { Log } from 'src/types/log';
 
-export const logTypeDetails = {
+export const logTypeDetails: Record<string, Log> = {
     UserExercise: {
         icon: Activity,
         title: 'Activity'
@@ -50,3 +51,22 @@ export const NOTIFICATION_TYPE = {
     STREAM_CHAT_MESSAGE: 'message.new',
     LESSON_COMPLETED: 'lesson.completed'
 };
+
+export const CLIENTS_TABLE_COLUMNS = [
+    'name',
+    'type',
+    'engagement',
+    'fbg',
+    'last_weight',
+    'last_week_avg_fbg',
+    'activity_type',
+    'duration',
+    'weekly_total',
+    'hydration'
+];
+
+export const timeFrames = [
+    { label: 'Last 7 days', value: '7' },
+    { label: 'Last 14 days', value: '14' },
+    { label: 'Last 30 days', value: '30' }
+];

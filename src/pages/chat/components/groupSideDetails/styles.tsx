@@ -26,7 +26,7 @@ export const SideTitle = styled.div`
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
 `;
 
 export const CloseIcon = styled.img`
@@ -47,7 +47,7 @@ export const ChatTitle = styled.div`
     font-weight: 500;
     font-size: 14px;
     line-height: 15px;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -57,7 +57,7 @@ export const DividerLine = styled.div`
     width: 100%;
     height: 0px;
     margin-left: 10px;
-    border-top: 1.5px solid #eef4fa;
+    border-top: 1.5px solid ${Colors.extra.aliceBlue};
     flex: none;
     order: 1;
     align-self: stretch;
@@ -71,7 +71,7 @@ export const EditGroupText = styled.div`
     font-weight: 400;
     font-size: 14px;
     line-height: 25px;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
     order: 0;
 `;
 
@@ -83,7 +83,7 @@ export const ChatMembers = styled.div`
     font-weight: 500;
     font-size: 15px;
     line-height: 22px;
-    color: ${Colors.extra.black};
+    color: ${Colors.extra.darkLiver};
 `;
 
 export const AddMemberIcon = styled.img`

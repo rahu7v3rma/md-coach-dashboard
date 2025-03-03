@@ -14,10 +14,10 @@ export const IconButton = styled.button`
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #eef4fa;
+    background: ${Colors.extra.aliceBlue};
     border-width: 0.5px 0.5px 2px 0.5px;
     border-style: solid;
-    border-color: #d3e6f8;
+    border-color: ${Colors.theme.lightSkyBlue};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +33,7 @@ export const Icon = styled.img`
 `;
 
 export const InputContainer = styled.div`
-    border: 1.5px solid #d3e6f8;
+    border: 1.5px solid ${Colors.theme.lightSkyBlue};
     border-radius: 16px;
     height: 48px;
     flex: 1;
@@ -51,9 +51,9 @@ export const Input = styled.input`
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color: #271a51;
+    color: ${Colors.extra.blackText};
     flex: 1;
-    caret-color: #6e51d0;
+    caret-color: ${Colors.extra.slateBlue};
     border: none;
     margin-left: 12px;
     margin-right: 12px;
@@ -88,9 +88,9 @@ export const ChatTools = styled.div`
         font-weight: 500;
         font-size: 14px;
         line-height: 20px;
-        color: #271a51;
+        color: ${Colors.extra.blackText};
         flex: 1;
-        caret-color: #6e51d0;
+        caret-color: ${Colors.extra.slateBlue};
         border: none;
         margin-right: 12px;
 
@@ -99,7 +99,7 @@ export const ChatTools = styled.div`
         }
 
         &::placeholder {
-            color: #a4aaaf;
+            color: ${Colors.theme.gray};
             letter-spacing: 0;
             font-size: 14px;
         }
@@ -113,7 +113,7 @@ export const ChatTools = styled.div`
     }
 
     &&& .rfu-file-upload-button svg {
-        fill: #7053d0;
+        fill: ${Colors.extra.slateBlue};
     }
 `;
 
@@ -123,13 +123,13 @@ export const InputWrapper = styled.div`
     flex: 1;
     align-items: center;
     flex-wrap: wrap;
-    background: #ffffff;
+    background: ${Colors.extra.white};
     width: 100%;
     padding: 0;
     padding-right: 15px;
     border-width: 1.5px;
     border-style: solid;
-    border-color: ${Colors.extra.light};
+    border-color: ${Colors.theme.primaryLight};
     border-radius: 16px;
     overflow: hidden;
 `;
@@ -139,3 +139,36 @@ export const EmojiSelectWrapper = styled.div`
         left: 0;
     }
 `;
+
+export const QuotedContainer = styled.div`
+    box-shadow: 0px -7px 3px -3px rgba(0, 0, 0, 0.19);
+    padding-left: 1em;
+    & .quoted-message-preview-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 8px;
+        & .str-chat__square-button {
+            background-color: transparent;
+            cursor: pointer;
+            border: none;
+        }
+    }
+    & .quoted-message-preview-content {
+        display: flex;
+        align-items: flex-end;
+        & div.quoted-avatar {
+            height: 32px;
+        }
+    }
+    & .quoted-message-preview-content-inner {
+        padding: 4px 8px;
+        margin-bottom: 2px;
+    }
+`;
+
+export const InputWrapperContainer = styled.div`
+    width: -webkit-fill-available;
+`;
+
+export const ChatToolsWrapper = styled.div``;

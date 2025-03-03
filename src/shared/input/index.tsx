@@ -4,16 +4,17 @@ import styled from 'styled-components';
 import EyeIcon from 'src/assets/eye-icon.svg';
 import UnMaskIcon from 'src/assets/unmask-icon.svg';
 import CircleButton from 'src/shared/circleButton';
+import { Colors } from 'src/utils/colors';
 
 const SearchBox = styled('div')<{ isError: boolean; size: string }>`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    background: #ffffff;
+    background: ${Colors.extra.white};
     width: 100%;
     padding: ${(props) => (props.size === 'lg' ? '0.85em' : '0.35em')} 1em;
     border-style: solid;
-    border-color: #d3e6f8;
+    border-color: ${Colors.theme.primaryLight};
     border-radius: 14px;
     overflow: hidden;
     box-sizing: content-box;
@@ -21,7 +22,7 @@ const SearchBox = styled('div')<{ isError: boolean; size: string }>`
 
     ${(props) =>
         props.isError
-            ? `background: #FFECEC; border: 1px solid #F9D4D4; box-shadow: 0px 4px 0px #F9D4D4;`
+            ? `background: ${Colors.extra.linen}; border: 1px solid ${Colors.extra.cyanLight}; box-shadow: 0px 4px 0px ${Colors.extra.cyanLight};`
             : ''};
 `;
 
@@ -42,24 +43,27 @@ const Input = styled('input')<{ isTypePassword: any; isError: boolean }>`
     font-family: 'Poppins';
     font-weight: 500;
     width: 100%;
-    color: #271a51;
+    color: ${Colors.extra.blackText};
 
     ${(props) =>
         props.isTypePassword
             ? 'letter-spacing: 2px; font-size: 16px;'
             : '   font-size: 14px;'};
 
-    ${(props) => (props.isError ? `background: #FFECEC; color: #D05151;` : '')};
+    ${(props) =>
+        props.isError
+            ? `background: ${Colors.extra.linen}; color: ${Colors.extra.darkTerraCotta};`
+            : ''};
 
     &::placeholder {
-        color: #a4aaaf;
+        color: ${Colors.theme.gray};
         letter-spacing: 0;
         font-size: 14px;
     }
 
     &:focus {
         background: transparent !important;
-        outline-color: #72996b;
+        outline-color: ${Colors.theme.primary};
         margin: 0;
     }
 `;
@@ -69,7 +73,7 @@ const InputWrapper = styled.div`
     flex: 0 0 90%;
 `;
 const ErrorText = styled.span`
-    color: #d05151;
+    color: ${Colors.extra.darkTerraCotta};
     font-weight: 400;
     font-size: 11px;
     position: absolute;
