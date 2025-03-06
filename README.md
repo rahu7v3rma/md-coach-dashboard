@@ -1,4 +1,7 @@
+<img src="https://github.com/user-attachments/assets/7042e29c-962e-46db-b520-1422cd983f5c" >
+
 # md-coach-dashboard
+https://www.masteringdiabetes.org
 
 ## Git Hooks
 
