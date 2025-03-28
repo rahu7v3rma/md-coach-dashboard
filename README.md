@@ -1,4 +1,6 @@
 <img src="https://github.com/user-attachments/assets/7042e29c-962e-46db-b520-1422cd983f5c" >
+<img width="1417" alt="Screenshot 2025-03-28 at 3 53 24 PM" src="https://github.com/user-attachments/assets/1ad0df0d-1a34-4ef1-882e-644bb3c5fb5f" />
+
 
 # md-coach-dashboard
 https://www.masteringdiabetes.org
